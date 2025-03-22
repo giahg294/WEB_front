@@ -8,7 +8,6 @@ const creneaux = {
   "Semestre 2": ["2025-03-01T15:00:00", "2025-04-01T15:00:00", "2025-05-01T15:00:00"]
 };
 
-// Fonction pour formater la date
 function formatDate(date) {
   return moment(date).format('DD MMMM YYYY');
 }
@@ -22,35 +21,22 @@ function App() {
         participants: 0,
         participantsAvtg: 0,
         bonnetsVendus: 0,
+        adhesions: 0 // Nouvelle propriété ajoutée
       };
       return acc;
     }, {})
   );
 
-  const updateParticipants = (date, newValue) => {
+  // Fonctions de mise à jour existantes
+  const updateValue = (date, key, newValue) => {
     setSeancesData(prev => ({
       ...prev,
-      [date]: { ...prev[date], participants: newValue }
-    }));
-  };
-
-  const updateParticipantsAvtg = (date, newValue) => {
-    setSeancesData(prev => ({
-      ...prev,
-      [date]: { ...prev[date], participantsAvtg: newValue }
-    }));
-  };
-
-  const updateBonnets = (date, newValue) => {
-    setSeancesData(prev => ({
-      ...prev,
-      [date]: { ...prev[date], bonnetsVendus: newValue }
+      [date]: { ...prev[date], [key]: Math.max(newValue, 0) }
     }));
   };
 
   return (
     <div className="p-8">
-      {/* Conteneur principal pour les deux colonnes */}
       <div className="flex justify-between">
         {/* Semestre 1 */}
         <div className="flex-1">
@@ -79,17 +65,12 @@ function App() {
         </div>
       </div>
 
-      {/* Section pour afficher la séance sélectionnée */}
       {selectedDate && (
         <div className="mt-8 border-t-2 pt-8">
           <Seance
             date={formatDate(selectedDate)}
-            participants={seancesData[selectedDate].participants}
-            participantsAvtg={seancesData[selectedDate].participantsAvtg}
-            bonnetsVendus={seancesData[selectedDate].bonnetsVendus}
-            onUpdateParticipants={(newVal) => updateParticipants(selectedDate, newVal)}
-            onUpdateParticipantsAvtg={(newVal) => updateParticipantsAvtg(selectedDate, newVal)}
-            onUpdateBonnets={(newVal) => updateBonnets(selectedDate, newVal)}
+            {...seancesData[selectedDate]}
+            onUpdate={(key, val) => updateValue(selectedDate, key, val)}
           />
         </div>
       )}
