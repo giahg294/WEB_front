@@ -4,89 +4,140 @@ function PaiementPage() {
   // 定义支付记录数据
   const paiementData = [
     {
-      id: '#4027111',
-      date: '12/01/2025',
-      email: 'lucaslhomme01@gmail.com',
-      prix: '€700.00',
-      eventDate: '30/01/2025',
+      nom: 'Yass',
+      email: 'yass123@gmail.com',
+      type:'bonnet',
+      prix: '€12.00',
+      paydate: '05/01/2025',
     },
     {
-      id: '#4027222',
-      date: '12/01/2025',
-      email: 'lucaslhomme01@gmail.com',
-      prix: '€700.00',
-      eventDate: '30/02/2025',
+        nom: 'Lhomme',
+        email: 'lhomme123@gmail.com',
+        type:'adhesion',
+        prix: '€20.00',
+        paydate: '09/01/2025',
     },
     {
-        id: '#4027333',
-        date: '12/01/2025',
-        email: 'lucaslhomme01@gmail.com',
-        prix: '€700.00',
-        eventDate: '30/02/2025',
-      },
-      {
-        id: '#4027444',
-        date: '12/01/2025',
-        email: 'lucaslhomme01@gmail.com',
-        prix: '€700.00',
-        eventDate: '30/02/2025',
-      },
-      {
-        id: '#4027555',
-        date: '12/01/2025',
-        email: 'lucaslhomme01@gmail.com',
-        prix: '€700.00',
-        eventDate: '30/02/2025',
-      },
-      {
-        id: '#4027666',
-        date: '12/01/2025',
-        email: 'lucaslhomme01@gmail.com',
-        prix: '€700.00',
-        eventDate: '30/02/2025',
-      },
-      {
-        id: '#4027777',
-        date: '12/01/2025',
-        email: 'lucaslhomme01@gmail.com',
-        prix: '€700.00',
-        eventDate: '30/02/2025',
-      },
-      {
-        id: '#4027888',
-        date: '12/01/2025',
-        email: 'lucaslhomme01@gmail.com',
-        prix: '€700.00',
-        eventDate: '30/02/2025',
-      },
-      {
-        id: '#4027999',
-        date: '12/01/2025',
-        email: 'lucaslhomme01@gmail.com',
-        prix: '€700.00',
-        eventDate: '30/02/2025',
-      },
-      {
-        id: '#4028000',
-        date: '12/01/2025',
-        email: 'lucaslhomme01@gmail.com',
-        prix: '€700.00',
-        eventDate: '30/02/2025',
-      },
-      {
-        id: '#4028111',
-        date: '12/01/2025',
-        email: 'lucaslhomme01@gmail.com',
-        prix: '€700.00',
-        eventDate: '30/02/2025',
-      },
-      {
-        id: '#4028222',
-        date: '12/01/2025',
-        email: 'lucaslhomme01@gmail.com',
-        prix: '€700.00',
-        eventDate: '30/02/2025',
-      },
+        nom: 'Giaaa',
+        email: 'giaaa123@gmail.com',
+        type:'abonnement normal',
+        prix: '€50.00',
+        paydate: '05/02/2025',
+    },
+    {
+
+        nom: 'Marine',
+        email: 'marine123@gmail.com',
+        type:'abonnement reduit',
+        prix: '€40.00',
+        paydate: '15/02/2025',
+    },
+    {
+
+        nom: 'Bianca',
+        email: 'bianca123@gmail.com',
+        type:'abonnement normal',
+        prix: '€50.00',
+        paydate: '15/02/2025',
+    },
+    {
+
+        nom: 'feifei',
+        email: 'feifei123@gmail.com',
+        type:'abonnement normal',
+        prix: '€50.00',
+        paydate: '20/02/2025',
+    },
+    {
+
+        nom: 'David',
+        email: 'daviddd@gmail.com',
+        type:'abonnement normal',
+        prix: '€50.00',
+        paydate: '25/02/2025',
+    },
+    {
+
+        nom: 'Rosa',
+        email: 'rosaaa@gmail.com',
+        type:'abonnement reduit',
+        prix: '€40.00',
+        paydate: '26/02/2025',
+    },
+    {
+
+        nom: 'Lise',
+        email: 'liseee@gmail.com',
+        type:'abonnement normal',
+        prix: '€50.00',
+        paydate: '27/02/2025',
+    },
+    {
+
+        nom: 'aumeurierr',
+        email: 'aumeurierr@gmail.com',
+        type:'abonnement normal',
+        prix: '€50.00',
+        paydate: '01/03/2025',
+    },
+    {
+
+        nom: 'anonymaaa',
+        email: 'anonymaaa@gmail.com',
+        type:'abonnement normal',
+        prix: '€50.00',
+        paydate: '02/03/2025',
+    },
+    {
+
+        nom: 'balefankanni',
+        email: 'balefankanni@gmail.com',
+        type:'abonnement normal',
+        prix: '€50.00',
+        paydate: '11/03/2025',
+    },
+    {
+
+        nom: 'skrskrr',
+        email: 'skkrr@gmail.com',
+        type:'adhesion',
+        prix: '€20.00',
+        paydate: '16/03/2025',
+    },
+    {
+
+        nom: 'flex',
+        email: 'flexibleflex@gmail.com',
+        type:'bonnet',
+        prix: '€12.00',
+        paydate: '20/03/2025',
+    },
+    {
+
+        nom: 'paris',
+        email: 'hilton@gmail.com',
+        type:'abonnement normal',
+        prix: '€50.00',
+        paydate: '20/03/2025',
+    },
+    {
+
+        nom: 'rafayel',
+        email: 'moartstudio@gmail.com',
+        type:'adhesion',
+        prix: '€20.00',
+        paydate: '23/03/2025',
+    },
+    {
+
+        nom: 'sylus',
+        email: 'andian@gmail.com',
+        type:'abonnement normal',
+        prix: '€50.00',
+        paydate: '02/04/2025',
+    },
+
+
     // on peut ajouter des donnees
   ];
 
@@ -119,11 +170,12 @@ function PaiementPage() {
       <table style={{ width: '100%', borderCollapse: 'collapse', marginTop: '20px' }}>
         <thead>
           <tr style={{ backgroundColor: '#D0E9F7' }}>
-            <th style={{ padding: '15px 20px', textAlign: 'center', fontSize: '16px' }}>ID</th>
+
             <th style={{ padding: '15px 20px', textAlign: 'center', fontSize: '16px' }}>Nom</th>
             <th style={{ padding: '15px 20px', textAlign: 'center', fontSize: '16px' }}>Email</th>
-            <th style={{ padding: '15px 20px', textAlign: 'center', fontSize: '16px' }}>Prix</th>
-            <th style={{ padding: '15px 20px', textAlign: 'center', fontSize: '16px' }}>Date de l'évènement</th>
+            <th style={{ padding: '15px 20px', textAlign: 'center', fontSize: '16px' }}>Type de transaction</th>
+            <th style={{ padding: '15px 20px', textAlign: 'center', fontSize: '16px' }}>Montant</th>
+            <th style={{ padding: '15px 20px', textAlign: 'center', fontSize: '16px' }}>Date de transaction</th>
 
           
           </tr>
@@ -132,11 +184,12 @@ function PaiementPage() {
         <tbody>
         {currentItems.map((item, index) => (
           <tr key={index} style={{ backgroundColor: index % 2 === 0 ? '#F1F9FF' : '#E0F4FF' }}>
-            <td style={{ padding: '10px', textAlign: 'center' }}>{item.id}</td>
-            <td style={{ padding: '10px', textAlign: 'center' }}>V</td>
+
+            <td style={{ padding: '10px', textAlign: 'center' }}>{item.nom}</td>
             <td style={{ padding: '10px', textAlign: 'center' }}>{item.email}</td>
+            <td style={{ padding: '10px', textAlign: 'center' }}>{item.type}</td>
             <td style={{ padding: '10px', textAlign: 'center' }}>{item.prix}</td>
-            <td style={{ padding: '10px', textAlign: 'center' }}>{item.eventDate}</td>
+            <td style={{ padding: '10px', textAlign: 'center' }}>{item.paydate}</td>
           </tr>
           ))}
         </tbody>
@@ -198,3 +251,7 @@ function PaiementPage() {
 
 
 export default PaiementPage;
+
+
+
+
