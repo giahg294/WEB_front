@@ -1,22 +1,25 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Sidebar from "./components/Sidebar";
-import SeanceStats from "./pages/SeanceStats";
-import AnnualStats from "./pages/AnnualStats";
+import './App.css';
+import { BrowserRouter as Router,Routes, Route } from 'react-router-dom';
+import Home from "./components/pages/Home";
+import Adhesion from "./components/pages/Adhesion";
+import Evenements from "./components/pages/Evenements";
+import AnnualStats from "./components/pages/AnnualStats";
+import SeanceStats from "./components/pages/SeanceStats";
 
 function App() {
   return (
+  <>
     <Router>
-      <div className="flex">
-        <Sidebar />
-        <div className="flex-1">
-          <Routes>
-            <Route path="/" element={<SeanceStats />} />
-            <Route path="/annual" element={<AnnualStats />} />
-          </Routes>
-        </div>
-      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/adhesion" element={<Adhesion />} />
+        <Route path="/events" element={<Evenements />} />
+        <Route path="/admin/annual" element={<AnnualStats />} />
+        <Route path="/admin/seance" element={<SeanceStats />} />
+      </Routes>
     </Router>
+  </>
   );
 }
 

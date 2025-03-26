@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import moment from 'moment';
-import MyButton from "../components/MyButton";
-import Seance from "../components/Seance";
+import MyButton from "../MyButton";
+import Seance from "../Seance";
+import Sidebar from "../Sidebar";
 
 const creneaux = {
   "Semestre 1": ["2024-09-01T15:00:00", "2024-10-01T15:00:00", "2024-11-01T15:00:00"],
@@ -12,7 +13,7 @@ function formatDate(date) {
   return moment(date).format('DD MMMM YYYY');
 }
 
-function App() {
+function SeanceStats() {
   const [selectedDate, setSelectedDate] = useState(null);
   
   const [seancesData, setSeancesData] = useState(
@@ -37,6 +38,7 @@ function App() {
 
   return (
     <div className="p-8">
+      <Sidebar/>
       <div className="flex justify-between">
         {/* Semestre 1 */}
         <div className="flex-1">
@@ -78,4 +80,4 @@ function App() {
   );
 }
 
-export default App;
+export default SeanceStats;
