@@ -1,11 +1,12 @@
 import React from 'react';
 import Navbar from '../Navbar';
+import './Adhesion.css';
 
 function Adhesion() {
   return (
-    <div className="Adhesion">
+    <div className="Home">
       <Navbar />
-      ADHESION
+      <img src="/eau2.jpg" alt="Fond Eau" className="background-image" />
     </div>
   );
 }

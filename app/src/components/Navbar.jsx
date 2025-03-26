@@ -25,11 +25,15 @@ function Navbar() {
       <nav className="navbar">
         <div className="navbar-container">
           {/* Logo + Texte */}
-          <Link to="/" className="navbar-logo">
-            <img src="/insaquatic.png" alt="Logo INSAQUATIC" className="navbar-logo-img" />
-             INSAQUATIC
-          </Link>
-
+          <div className="nav-title">
+            <Link to="/" className="navbar-logo">
+              <img src="/insaquatic.png" alt="Logo INSAQUATIC" className="navbar-logo-img" />
+            </Link>
+            <Link to="/" className="navbar-text">
+              INSAQUATIC
+            </Link>
+          </div>
+      
           {/* Icône Menu */}
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />

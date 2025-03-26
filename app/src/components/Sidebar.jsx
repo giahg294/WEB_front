@@ -9,7 +9,7 @@ function Sidebar() {
         <ul>
           <li className="mb-4">
             <Link
-              to="/"
+              to="/admin/seances"
               className="block py-2 px-4 rounded hover:bg-blue-700 transition"
             >
               Statistiques par séance
@@ -17,7 +17,7 @@ function Sidebar() {
           </li>
           <li>
             <Link
-              to="/annual"
+              to="/admin/annual"
               className="block py-2 px-4 rounded hover:bg-blue-700 transition"
             >
               Statistiques annuelles

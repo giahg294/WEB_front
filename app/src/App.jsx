@@ -4,6 +4,7 @@ import { BrowserRouter as Router,Routes, Route } from 'react-router-dom';
 import Home from "./components/pages/Home";
 import Adhesion from "./components/pages/Adhesion";
 import Evenements from "./components/pages/Evenements";
+import Auth from "./components/pages/Auth";
 import AnnualStats from "./components/pages/AnnualStats";
 import SeanceStats from "./components/pages/SeanceStats";
 
@@ -15,8 +16,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/adhesion" element={<Adhesion />} />
         <Route path="/events" element={<Evenements />} />
+        <Route path="/admin" element={<Auth />} />
         <Route path="/admin/annual" element={<AnnualStats />} />
-        <Route path="/admin/seance" element={<SeanceStats />} />
+        <Route path="/admin/seances" element={<SeanceStats />} />
       </Routes>
     </Router>
   </>
