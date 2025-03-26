@@ -6,6 +6,7 @@ import Adhesion from "./components/pages/Adhesion";
 import Evenements from "./components/pages/Evenements";
 import AnnualStats from "./components/pages/AnnualStats";
 import SeanceStats from "./components/pages/SeanceStats";
+import Paiement from "./components/pages/Paiement";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/events" element={<Evenements />} />
         <Route path="/admin/annual" element={<AnnualStats />} />
         <Route path="/admin/seance" element={<SeanceStats />} />
+        <Route path="/admin/paiement" element={<Paiement />} />
       </Routes>
     </Router>
   </>
