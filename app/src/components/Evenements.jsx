@@ -1,7 +1,7 @@
 import React from 'react';
-import Navbar from '../Navbar';
+import Navbar from './Navbar';
 import "./Evenements.css";
-import ListEvents from '../ListEvents';
+import ListEvents from './ListEvents';
 
 function Evenements() {
   return (

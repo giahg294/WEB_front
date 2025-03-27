@@ -1,13 +1,14 @@
 import React from "react";
 import './App.css';
 import { BrowserRouter as Router,Routes, Route } from 'react-router-dom';
-import Home from "./components/pages/Home";
-import Adhesion from "./components/pages/Adhesion";
-import Evenements from "./components/pages/Evenements";
-import Auth from "./components/pages/Auth";
-import AnnualStats from "./components/pages/AnnualStats";
-import SeanceStats from "./components/pages/SeanceStats";
-import Paiement from "./components/pages/Paiement";
+import Home from "./components/Home";
+import Adhesion from "./components/Adhesion";
+import Evenements from "./components/Evenements";
+import Auth from "./components/Auth";
+import Paiement from "./components/Paiement";
+import AnnualStats from "./components/Dashboard/AnnualStats";
+import SeanceStats from "./components/Dashboard/SeanceStats";
+
 
 function App() {
   return (

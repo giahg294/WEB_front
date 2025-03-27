@@ -9,7 +9,7 @@ function Sidebar() {
         <ul>
           <li className="mb-4">
             <Link
-              to="/admin/seances"
+              to="/admin/seance"
               className="block py-2 px-4 rounded hover:bg-blue-700 transition"
             >
               Statistiques par séance
