@@ -1,0 +1,63 @@
+
+.eventspage {
+    height: 60vh;
+  }
+
+.title {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    color: #ffffff;
+    text-shadow: 5px 5px 20px rgb(0, 0, 0);
+    font-weight: bold;
+    z-index: 1;
+    text-align: flex-start;
+    letter-spacing: 2px;
+}
+
+.events-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    padding: 40px;
+    justify-items: center;
+  }
+  
+.event-card {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: #f4f4f4;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80%;
+    height: 200px;
+    transition: transform 0.2s ease;
+  }
+  
+.event-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+.event-card button {
+    background: #5791c3;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+.event-card button:hover {
+    background: #865469;
+  }
+  
+.event-card:hover {
+    transform: translateY(-5px);
+  }
+  
