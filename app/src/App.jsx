@@ -1,9 +1,9 @@
 import React from "react";
 import './App.css';
 import { BrowserRouter as Router,Routes, Route } from 'react-router-dom';
-import Home from "./components/Home";
-import Adhesion from "./components/Adhesion";
-import Evenements from "./components/Evenements";
+import Home from "./components/Home/Home";
+import Adhesion from "./components/Adhesion/Adhesion";
+import Evenements from "./components/Events/Evenements";
 import Auth from "./components/Auth";
 import Paiement from "./components/Paiement";
 import AnnualStats from "./components/Dashboard/AnnualStats";

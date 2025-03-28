@@ -1,12 +1,12 @@
 import React from 'react';
-import Navbar from './Navbar';
+import Navbar from '../Navbar';
 import './Home.css';
 
 function Home() {
   return (
     <div className="Home">
       <Navbar />
-      <img src="/eau2.jpg" alt="Fond Eau" className="background-image" />
+      {/* <img src="/eau2.jpg" alt="Fond Eau" className="background-image" /> */}
       <div className="homepage">
         <h1 className="hometitle">
           INSAQUATIC

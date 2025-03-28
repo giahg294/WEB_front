@@ -2,8 +2,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  background: linear-gradient(180deg, rgb(86, 142, 211) 0%, rgba(196, 236, 255, 0.955) 50%, rgba(255, 255, 255, 0) 100%);
-  height: 130px;
+  background: linear-gradient(180deg, rgb(104, 172, 255) 0%, rgba(158, 224, 255, 0.796) 40%, rgba(255, 255, 255, 0) 100%);
+  height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
