@@ -63,6 +63,8 @@
   color: #000000;
   font-weight: bold;
   display: flex;
+  padding-top:15px;
+  justify-content: center;
   height: 100%;
   width: 100%;
   text-decoration: none;
