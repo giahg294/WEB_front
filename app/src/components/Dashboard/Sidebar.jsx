@@ -16,14 +16,14 @@ function Sidebar() {
               className="items"
             >
               <img src="/maison.png" alt="home" className="icon" />
-              Tableau de bord
+              Statistiques annuelles
             </Link>
             <Link
               to="/admin/seance"
               className="items"
             >
               <img src="/stat.png" alt="stat" className="icon" />
-              Statistiques séances
+              Statistiques par séances
             </Link>
             <Link
               to="/admin/paiements"

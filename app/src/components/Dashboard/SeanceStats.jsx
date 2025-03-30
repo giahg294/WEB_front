@@ -16,8 +16,8 @@ function MyButton({ ButtonText, onClick }) {
 }
 
 const creneaux = {
-  "Semestre 1": ["2024-09-01T15:00:00", "2024-10-01T15:00:00", "2024-11-01T15:00:00"],
-  "Semestre 2": ["2025-03-01T15:00:00", "2025-04-01T15:00:00", "2025-05-01T15:00:00"]
+  "Semestre 1": ["2024-09-01T15:00:00", "2024-10-01T15:00:00", "2024-11-01T15:00:00","2024-12-01T15:00:00", "2025-01-01T15:00:00", "2025-02-01T15:00:00"],
+  "Semestre 2": ["2025-03-01T15:00:00", "2025-04-01T15:00:00", "2025-05-01T15:00:00","2025-06-01T15:00:00", "2025-07-01T15:00:00", "2025-08-01T15:00:00"]
 };
 
 function formatDate(date) {
@@ -30,10 +30,10 @@ function SeanceStats() {
   const [seancesData, setSeancesData] = useState(
     Object.values(creneaux).flat().reduce((acc, date) => {
       acc[date] = {
-        participants: 0,
-        participantsAvtg: 0,
-        bonnetsVendus: 0,
-        adhesions: 0
+        entreeTN: 0,
+        entreeTR: 0,
+        abonnementTN: 0,
+        abonnementTR: 0
       };
       return acc;
     }, {})
