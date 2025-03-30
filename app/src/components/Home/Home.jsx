@@ -7,16 +7,17 @@ function Home() {
     <div className="Home">
       <Navbar />
       {/* <img src="/eau2.jpg" alt="Fond Eau" className="background-image" /> */}
-      <div className="homepage">
-        <h1 className="hometitle">
+      <div className="page">
+        <h1 className="title">
           INSAQUATIC
-          <h1 className="titledescription">
+          <h1 className="description">
             Association de natation de l'INSA Lyon
           </h1>
         </h1>
-        <h2>
-          
-        </h2>
+      </div>
+      <div className='page'>
+        <h1 className="description">Qui sommes-nous ?</h1>
+        <img src="/groupe.png" alt="Groupe" className="imageGroupe" />
       </div>
     </div>
   );

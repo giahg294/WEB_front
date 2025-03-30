@@ -27,7 +27,7 @@ function Navbar() {
           {/* Logo + Texte */}
           <div className="nav-title">
             <Link to="/" className="navbar-logo">
-              <img src="/insaquatic.png" alt="Logo INSAQUATIC" className="navbar-logo-img" />
+              <img src="/insaquatic.svg" alt="Logo INSAQUATIC" className="navbar-logo-img" />
             </Link>
             <Link to="/" className="navbar-text">
               INSAQUATIC

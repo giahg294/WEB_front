@@ -1,0 +1,31 @@
+.box{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+.button{
+    height: 60px;
+    width: 180px;
+    background-color: rgb(197, 228, 255);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.button:hover{
+    background: #86546979;
+    transform: translateY(-5px);
+}
+
+.contenu{
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+.data{
+    margin: 20px;
+    display: flex;
+    height: 100%;
+    align-items: baseline;
+}

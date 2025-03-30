@@ -1,0 +1,25 @@
+.page{
+    display: flex;
+    background: rgb(231, 236, 238);
+    flex-direction: column;
+    margin-left: 250px;
+    height: 100vh;
+}
+
+.titre{
+    display: flex;
+    padding: 20px;
+    justify-content: baseline;
+    align-items: flex-start;
+    width: 100%;
+    font-size:25px;
+    color: #000000;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.contenu{
+    display:flex;
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+}

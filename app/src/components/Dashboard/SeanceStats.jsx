@@ -1,8 +1,19 @@
 import React, { useState } from "react";
 import moment from 'moment';
-import MyButton from "./MyButton";
 import Seance from "./Seance";
 import Sidebar from "./Sidebar";
+import "./SeanceStats.css"
+
+function MyButton({ ButtonText, onClick }) {
+  return (
+    <button
+      onClick={onClick}
+      className="button"
+    >
+      {ButtonText}
+    </button>
+  );
+}
 
 const creneaux = {
   "Semestre 1": ["2024-09-01T15:00:00", "2024-10-01T15:00:00", "2024-11-01T15:00:00"],
@@ -36,20 +47,16 @@ function SeanceStats() {
   };
 
   return (
-    <div className="flex h-screen">
+    <div className="page">
       {/* Sidebar */}
-      <div className="w-64 bg-gray-800 text-white p-4">
         <Sidebar />
-      </div>
-
       {/* Contenu principal */}
-      <div className="flex-1 p-8">
-        <div className="flex justify-around">
+      <div className="contenu">
           {/* Semestre 1 */}
-          <div className="flex-1 px-4">
-            <h1 className="text-2xl font-semibold mb-4 text-blue-600">Semestre 1</h1>
+          <div className="box">
+            <h1 className="titre">Semestre 1</h1>
             {creneaux["Semestre 1"].map((date) => (
-              <div key={date} className="mb-4">
+              <div key={date} className="items">
                 <MyButton
                   ButtonText={moment(date).format("DD MMMM YYYY")}
                   onClick={() => setSelectedDate(date)}
@@ -59,10 +66,10 @@ function SeanceStats() {
           </div>
 
           {/* Semestre 2 */}
-          <div className="flex-1 px-4">
-            <h1 className="text-2xl font-semibold mb-4 text-green-600">Semestre 2</h1>
+          <div className="box">
+            <h1 className="titre">Semestre 2</h1>
             {creneaux["Semestre 2"].map((date) => (
-              <div key={date} className="mb-4">
+              <div key={date} className="items">
                 <MyButton
                   ButtonText={moment(date).format("DD MMMM YYYY")}
                   onClick={() => setSelectedDate(date)}
@@ -70,10 +77,9 @@ function SeanceStats() {
               </div>
             ))}
           </div>
-        </div>
 
         {selectedDate && (
-          <div className="mt-8 border-t-2 pt-8">
+          <div className="data">
             <Seance
               date={formatDate(selectedDate)}
               {...seancesData[selectedDate]}

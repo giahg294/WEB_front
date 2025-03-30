@@ -1,26 +1,36 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Sidebar.css"
 
 function Sidebar() {
   return (
-    <div className="w-64 bg-blue-800 text-white h-screen p-4">
-      <h1 className="text-2xl font-bold mb-8">Dashboard</h1>
+    <div className="Sidebar">
+      <h1 className="Logo">
+        <img src="/insaquatic.svg" alt="Logo INSAQUATIC" className="logo" />
+      </h1>
       <nav>
         <ul>
-          <li className="mb-4">
-            <Link
-              to="/admin/seance"
-              className="block py-2 px-4 rounded hover:bg-blue-700 transition"
-            >
-              Statistiques par séance
-            </Link>
-          </li>
-          <li>
+          <li className="menu">
             <Link
               to="/admin/annual"
-              className="block py-2 px-4 rounded hover:bg-blue-700 transition"
+              className="items"
             >
-              Statistiques annuelles
+              <img src="/maison.png" alt="home" className="icon" />
+              Tableau de bord
+            </Link>
+            <Link
+              to="/admin/seance"
+              className="items"
+            >
+              <img src="/stat.png" alt="stat" className="icon" />
+              Statistiques séances
+            </Link>
+            <Link
+              to="/admin/paiements"
+              className="items"
+            >
+              <img src="/paiement.png" alt="money" className="icon" />
+              Paiements
             </Link>
           </li>
         </ul>
