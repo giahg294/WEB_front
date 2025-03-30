@@ -1,5 +1,7 @@
 import React from 'react';
 import Navbar from '../Navbar';
+import ImageCarousel from './Images';
+import Apropos from './Apropos';
 import './Home.css';
 
 function Home() {
@@ -14,10 +16,10 @@ function Home() {
             Association de natation de l'INSA Lyon
           </h1>
         </h1>
+        <ImageCarousel />
       </div>
       <div className='page'>
-        <h1 className="description">Qui sommes-nous ?</h1>
-        <img src="/groupe.png" alt="Groupe" className="imageGroupe" />
+        <Apropos />
       </div>
     </div>
   );
