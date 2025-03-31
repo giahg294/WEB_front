@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin: 0 auto; /* Centre le carrousel */
+  margin: 0 auto;
   padding: 0;
 }
 
@@ -24,8 +24,6 @@
   width: 90%; /* Ajuste la taille des images */
   max-width: 350px; /* Taille maximale */
   height: auto;
-  border-radius: 15px; /* Coins arrondis */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out;
 }
 
@@ -43,8 +41,6 @@
   width: 90%;
   max-width: 350px;
   height: auto;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out;
 }
 

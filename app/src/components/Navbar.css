@@ -29,8 +29,8 @@
   cursor: pointer;
   text-decoration: none;
   display: flex;
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   justify-content: center;
 } 
 
