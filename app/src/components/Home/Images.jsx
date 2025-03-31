@@ -3,6 +3,7 @@ import 'swiper/css';
 import 'swiper/css/autoplay';
 import { Autoplay } from 'swiper/modules';
 import "./Images.css";
+import React from "react";
 
 const ImageCarousel = () => {
   const images = [

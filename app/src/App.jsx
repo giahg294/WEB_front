@@ -21,7 +21,7 @@ function App() {
         <Route path="/admin" element={<Auth />} />
         <Route path="/admin/annual" element={<AnnualStats />} />
         <Route path="/admin/seance" element={<SeanceStats />} />
-        <Route path="/admin/paiement" element={<Paiement />} />
+        <Route path="/admin/paiements" element={<Paiement />} />
       </Routes>
     </Router>
   </>
