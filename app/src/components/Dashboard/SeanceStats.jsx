@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import moment from 'moment';
 import Seance from "./Seance";
 import Sidebar from "./Sidebar";
+import EventsComponent from "./RecupData";
 import "./SeanceStats.css"
 
 function MyButton({ ButtonText, onClick }) {
@@ -88,6 +89,7 @@ function SeanceStats() {
           </div>
         )}
       </div>
+      <EventsComponent/>
     </div>
   );
 }
