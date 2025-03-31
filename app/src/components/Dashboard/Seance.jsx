@@ -13,7 +13,6 @@ class Seance extends Component {
   renderControl(label, value, key) {
     return (
       <div className="flex items-center justify-between mb-4 gap-4">
-        {/* Libellé et valeur */}
         <div className="flex-1 text-center">
           <span className="font-semibold text-gray-700">{label}:</span>
           <span className="ml-2 text-lg">{value}</span>
