@@ -8,7 +8,7 @@ function Adhesion() {
   return (
     <div className="Ad">
       <Navbar />
-      <div className="ad-page">
+      <div className="page">
         <div className='ad-title'>
           Les adhésions disponibles : 
         </div>

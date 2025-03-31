@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from "react-router-dom";
 import './Navbar.css';
 
 
 function Navbar() {
+    const location = useLocation(); // Récupère l'URL actuelle
     const [click, setClick] = useState(false);
     const [button, setButton] = useState(true);
     
@@ -39,17 +40,17 @@ function Navbar() {
           </div>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className='nav-item'>
-                <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+                <Link to='/' className={`nav-links ${location.pathname === "/" ? "active" : ""}`} onClick={closeMobileMenu}>
                 A propos
                 </Link>
             </li>
             <li className='nav-item'>
-                <Link to='/events' className='nav-links' onClick={closeMobileMenu}>
+                <Link to='/events' className={`nav-links ${location.pathname === "/events" ? "active" : ""}`} onClick={closeMobileMenu}>
                 Evénements
                 </Link>
             </li>
             <li className='nav-item'>
-                <Link to='/adhesion' className='nav-links' onClick={closeMobileMenu}>
+                <Link to='/adhesion' className={`nav-links ${location.pathname === "/adhesion" ? "active" : ""}`} onClick={closeMobileMenu}>
                 Adhésion
                 </Link>
             </li>

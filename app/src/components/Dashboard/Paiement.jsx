@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Sidebar from './Sidebar';
 
 function PaiementPage() {
   const paiementData = [
@@ -43,7 +44,8 @@ function PaiementPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-blue-200 to-green-200 p-8">
+    <div className="ad-page">
+      <Sidebar/>
       <h1 className="text-3xl font-bold text-center text-gray-800 mb-6">Liste des paiements</h1>
 
       <div className="overflow-x-auto bg-white shadow-lg rounded-lg">

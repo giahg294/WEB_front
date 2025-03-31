@@ -1,8 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import "./Sidebar.css"
+import { Link, useLocation } from "react-router-dom";
+import "./Sidebar.css";
 
 function Sidebar() {
+  const location = useLocation(); // Récupère l'URL actuelle
+  
   return (
     <div className="Sidebar">
       <h1 className="Logo">
@@ -11,23 +13,23 @@ function Sidebar() {
       <nav>
         <ul>
           <li className="menu">
-            <Link
+          <Link
               to="/admin/annual"
-              className="items"
+              className={`items ${location.pathname === "/admin/annual" ? "active" : ""}`}
             >
               <img src="/maison.png" alt="home" className="icon" />
               Statistiques annuelles
             </Link>
             <Link
               to="/admin/seance"
-              className="items"
+              className={`items ${location.pathname === "/admin/seance" ? "active" : ""}`}
             >
               <img src="/stat.png" alt="stat" className="icon" />
               Statistiques par séances
             </Link>
             <Link
               to="/admin/paiements"
-              className="items"
+              className={`items ${location.pathname === "/admin/paiements" ? "active" : ""}`}
             >
               <img src="/paiement.png" alt="money" className="icon" />
               Paiements

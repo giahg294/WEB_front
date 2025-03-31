@@ -5,7 +5,7 @@ import Home from "./components/Home/Home";
 import Adhesion from "./components/Adhesion/Adhesion";
 import Evenements from "./components/Events/Evenements";
 import Auth from "./components/Authentification/Auth";
-import Paiement from "./components/Paiement";
+import Paiement from "./components/Dashboard/Paiement";
 import AnnualStats from "./components/Dashboard/AnnualStats";
 import SeanceStats from "./components/Dashboard/SeanceStats";
 
