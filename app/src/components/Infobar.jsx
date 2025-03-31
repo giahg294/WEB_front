@@ -17,7 +17,10 @@ function Infobar() {
                     >
                         <i className="fab fa-instagram"></i> @insaquatic
                     </a>
-                    <span className="infobar-mail">insaquatic@gmail.com</span>
+                    <span className="infobar-mail">
+                        <i className="fas fa-envelope"></i> insaquatic@gmail.com
+                    </span>
+
                 </div>
 
                 <div className="infobar-right">
