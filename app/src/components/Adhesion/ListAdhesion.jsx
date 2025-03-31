@@ -5,7 +5,7 @@ function ListAdhesion() {
 
   // Récupération du JSON
   useEffect(() => {
-    fetch('/response_adhesion.json')
+    fetch('/response_adhesion')
       .then((response) => response.json())
       .then((data) => setEvents(data.data))
       .catch((error) => console.error('Erreur de chargement:', error));
