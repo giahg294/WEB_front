@@ -24,7 +24,6 @@ function Navbar() {
     <>
       <nav className="navbar">
         <div className="navbar-container">
-          {/* Logo + Texte */}
           <div className="nav-title">
             <Link to="/" className="navbar-logo">
               <img src="/insaquatic.svg" alt="Logo INSAQUATIC" className="navbar-logo-img" />

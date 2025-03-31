@@ -2,20 +2,22 @@
   display: flex;
   justify-content: right;
   align-items: center;
-  height: 50vh;
-  width:50%;
-  background-color: #e38383;
+  height: 300px;
+  width:900px;
+  background-color: #b41d1d;
   border-radius: 15px;
+  padding: 20px;
 }
 
 .container-img{
   display:block;
   overflow:hidden;  
   border-radius: 15px;
+  justify-content: flex-end;
 }
 .container-img img{
   width:100%;
-  height: 50vh;
+  height: 300px;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   -ms-transition: all 0.2s;
@@ -40,14 +42,13 @@
   padding: 10px;
 }
 
-.description {
+.txtapropos {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
-  line-height: 1.4;
-  color: #333;
+  line-height: 1.5;
+  color: #000000;
   max-width: 90%;
-  text-align: left;
-  margin: 20px;
+  text-align: justify;
   padding: 10px;
 }
 
@@ -56,5 +57,13 @@
   flex-direction: column; /* Met le titre au-dessus */
   justify-content: center; /* Centre verticalement */
   align-items: flex-start; /* Aligne le texte à gauche */
-  width: 60%; /* Ajuste la largeur */
+  width: 90%; /* Ajuste la largeur */
+}
+
+.titreapropos {
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 10px; /* Espacement entre titre et texte */
 }
