@@ -1,3 +1,9 @@
+.Adhesion {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .background-image {
     position: fixed;
     top: 0;
@@ -8,3 +14,6 @@
     z-index: -1;
   }
 
+.adhesionpage {
+  flex: 1;
+}
