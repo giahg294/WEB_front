@@ -2,21 +2,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  max-width: 1200px; /* Limite la largeur du carrousel */
+  width: 100vw;
   margin: 0 auto; /* Centre le carrousel */
-  padding: 20px 0;
+  padding: 0;
 }
 
 .swiper {
   width: 100%;
   overflow: hidden;
+  margin: 0 auto;
 }
 
 .swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 100%;
 }
 
 .swiper-slide img {
@@ -30,4 +31,23 @@
 
 .swiper-slide img:hover {
   transform: scale(1.05); /* Effet de zoom au survol */
+}
+
+.carousel-wrapper {
+  width: 100%;
+  max-width: 100vw; /* Empêche le dépassement horizontal */
+  overflow: hidden; /* Cache tout débordement */
+}
+
+.carousel-image {
+  width: 90%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-image:hover {
+  transform: scale(1.05);
 }
