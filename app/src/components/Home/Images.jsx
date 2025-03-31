@@ -7,10 +7,11 @@ import React from "react";
 
 const ImageCarousel = () => {
   const images = [
-    "/image1.jpg",
-    "/image2.jpg",
-    "/image3.jpg",
-    "/image4.jpg"
+    "/image1.png",
+    "/image2.png",
+    "/image3.png",
+    "/image4.png",
+    "/image5.png",
   ];
 
   return (
