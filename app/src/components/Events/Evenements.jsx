@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../Navbar';
 import "./Evenements.css";
 import ListEvents from './ListEvents';
+import Infobar from '../Infobar';
 
 function Evenements() {
   return (
@@ -14,6 +15,7 @@ function Evenements() {
         </div>
       <ListEvents />
       </div>
+      <Infobar />
     </div>
   );
 }

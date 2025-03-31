@@ -3,6 +3,7 @@ import Navbar from '../Navbar';
 import ImageCarousel from './Images';
 import Apropos from './Apropos';
 import './Home.css';
+import Infobar from '../Infobar';
 
 function Home() {
   return (
@@ -20,6 +21,7 @@ function Home() {
       <div className='pageHome'>
         <Apropos />
       </div>
+      <Infobar />
     </div>
   );
 }
