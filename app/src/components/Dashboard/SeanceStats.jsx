@@ -47,7 +47,7 @@ function SeanceStats() {
   };
 
   return (
-    <div className="page">
+    <div className="pageadmin">
       {/* Sidebar */}
         <Sidebar />
       {/* Contenu principal */}

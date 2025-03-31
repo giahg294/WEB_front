@@ -3,16 +3,16 @@
     height: 60vh;
   }*/
 
-  .Evenements {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  
-  .eventspage {
-    flex: 1; /* prend toute la hauteur restante */
-    padding: 20px;
-  }  
+.Evenements {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.eventspage {
+  flex: 1; /* prend toute la hauteur restante */
+  padding: 20px;
+}  
 
 .title {
     display: flex;

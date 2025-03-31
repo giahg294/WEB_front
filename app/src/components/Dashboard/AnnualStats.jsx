@@ -5,7 +5,7 @@ import Statsgraphe from "./Statsgraphe";
 
 function AnnualStats() {
   return (
-    <div className="page">
+    <div className="pageadmin">
       <Sidebar/>
       <div className="titre">
       </div>
