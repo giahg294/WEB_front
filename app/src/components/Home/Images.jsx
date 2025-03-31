@@ -14,6 +14,7 @@ const ImageCarousel = () => {
   ];
 
   return (
+    <div className="carousel-wrapper">
     <Swiper
       modules={[Autoplay]}
       autoplay={{ delay: 3000, disableOnInteraction: false }}
@@ -28,10 +29,11 @@ const ImageCarousel = () => {
     >
       {images.map((src, index) => (
         <SwiperSlide key={index}>
-          <img src={src} alt={`Slide ${index}`} className="w-full rounded-xl shadow-lg" />
+          <img src={src} alt={`Slide ${index}`} className="carousel-image" />
         </SwiperSlide>
       ))}
     </Swiper>
+    </div>
   );
 };
 
