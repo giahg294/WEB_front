@@ -8,7 +8,7 @@ function Home() {
   return (
     <div className="Home">
       <Navbar />
-      <div className="page">
+      <div className="pageHome">
         <h1 className="title">
           INSAQUATIC
           <h1 className="description">
@@ -17,7 +17,7 @@ function Home() {
         </h1>
         <ImageCarousel />
       </div>
-      <div className='page'>
+      <div className='pageHome'>
         <Apropos />
       </div>
     </div>
