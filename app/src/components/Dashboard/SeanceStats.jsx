@@ -8,7 +8,7 @@ function MyButton({ ButtonText, onClick }) {
   return (
     <button
       onClick={onClick}
-      className="button"
+      className="ad-button"
     >
       {ButtonText}
     </button>
@@ -47,16 +47,16 @@ function SeanceStats() {
   };
 
   return (
-    <div className="pageadmin">
+    <div className="ad-page">
       {/* Sidebar */}
         <Sidebar />
       {/* Contenu principal */}
-      <div className="contenu">
+      <div className="ad-contenu">
           {/* Semestre 1 */}
-          <div className="box">
-            <h1 className="titre">Semestre 1</h1>
+          <div className="ad-box">
+            <h1 className="ad-titre">Semestre 1</h1>
             {creneaux["Semestre 1"].map((date) => (
-              <div key={date} className="items">
+              <div key={date} className="ad-items">
                 <MyButton
                   ButtonText={moment(date).format("DD MMMM YYYY")}
                   onClick={() => setSelectedDate(date)}
@@ -66,10 +66,10 @@ function SeanceStats() {
           </div>
 
           {/* Semestre 2 */}
-          <div className="box">
-            <h1 className="titre">Semestre 2</h1>
+          <div className="ad-box">
+            <h1 className="ad-titre">Semestre 2</h1>
             {creneaux["Semestre 2"].map((date) => (
-              <div key={date} className="items">
+              <div key={date} className="ad-items">
                 <MyButton
                   ButtonText={moment(date).format("DD MMMM YYYY")}
                   onClick={() => setSelectedDate(date)}
@@ -79,7 +79,7 @@ function SeanceStats() {
           </div>
 
         {selectedDate && (
-          <div className="data">
+          <div className="ad-data">
             <Seance
               date={formatDate(selectedDate)}
               {...seancesData[selectedDate]}

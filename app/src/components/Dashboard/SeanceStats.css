@@ -1,10 +1,10 @@
-.box{
+.ad-box{
     display: flex;
     flex-direction: column;
     width: 20%;
 }
 
-.button{
+.ad-button{
     height: 60px;
     width: 180px;
     background-color: rgb(197, 228, 255);
@@ -12,18 +12,18 @@
     border-radius: 5px;
 }
 
-.button:hover{
+.ad-button:hover{
     background: #86546979;
     transform: translateY(-5px);
 }
 
-.contenu{
+.ad-contenu{
     display: flex;
     justify-content: flex-start;
     padding: 20px;
 }
 
-.data{
+.ad-data{
     margin: 20px;
     display: flex;
     height: 100%;

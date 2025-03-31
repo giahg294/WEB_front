@@ -6,10 +6,10 @@ import ListAdhesion from './ListAdhesion';
 
 function Adhesion() {
   return (
-    <div className="Adhesion">
+    <div className="Ad">
       <Navbar />
-      <div className="eventspage">
-        <div className='title'>
+      <div className="ad-page">
+        <div className='ad-title'>
           Les adhésions disponibles : 
         </div>
       <ListAdhesion />

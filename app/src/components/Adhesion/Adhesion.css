@@ -1,15 +1,15 @@
-.adhesionpage {
+.ad-page {
   flex: 1;
   padding: 20px;
 }
 
-.Adhesion {
+.Ad {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
   }
   
-.title {
+.ad-title {
     display: flex;
     justify-content: center;
     font-size: 2rem;
@@ -20,7 +20,7 @@
     letter-spacing: 2px;
 }
 
-.adhesions-container {
+.ad-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 40px;

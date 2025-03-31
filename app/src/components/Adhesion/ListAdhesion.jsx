@@ -12,7 +12,7 @@ function ListAdhesion() {
   }, []);
   
   return (
-    <div className="adhesions-container">
+    <div className="ad-container">
       {events.map((event, index) => (
         <div key={index} className="adhesion">
           <h1>{event.nom}</h1>

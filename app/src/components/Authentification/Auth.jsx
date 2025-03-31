@@ -3,10 +3,10 @@ import "./Auth.css"
 
 function Auth() {
   return (
-    <div className="pageauth">
+    <div className="auth-page">
         Pade d'authentification
-        <h1 className="box">
-          <div className="items">
+        <h1 className="auth-box">
+          <div className="auth-items">
 
           </div>
         </h1>

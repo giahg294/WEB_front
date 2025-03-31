@@ -1,4 +1,4 @@
-.pageamdin{
+.ad-page{
     display: flex;
     background: rgb(231, 236, 238);
     flex-direction: column;
@@ -6,7 +6,7 @@
     height: 100vh;
 }
 
-.titre{
+.ad-titre{
     display: flex;
     padding: 20px;
     justify-content: baseline;
@@ -17,7 +17,7 @@
     font-weight: bold;
     letter-spacing: 2px;
 }
-.contenu{
+.ad-contenu{
     display:flex;
     padding: 20px;
     height: 100%;

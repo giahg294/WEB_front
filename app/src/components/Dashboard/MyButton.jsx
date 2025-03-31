@@ -4,7 +4,7 @@ function MyButton({ ButtonText, onClick }) {
   return (
     <button
       onClick={onClick}
-      className="button"
+      className="ad-button"
     >
       {ButtonText}
     </button>
