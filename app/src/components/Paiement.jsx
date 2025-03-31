@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 function PaiementPage() {
-  // 定义支付记录数据
+
   const paiementData = [
     {
       nom: 'Yass',

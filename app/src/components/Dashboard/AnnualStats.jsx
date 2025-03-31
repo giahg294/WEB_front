@@ -1,16 +1,16 @@
 import React from "react";
 import "./AnnualStats.css"
 import Sidebar from "./Sidebar"
+import Statsgraphe from "./Statsgraphe"; 
 
 function AnnualStats() {
   return (
     <div className="page">
       <Sidebar/>
       <div className="titre">
-        Statistiques annuelles
       </div>
       <div className="contenu">
-        Contenu statistique
+        <Statsgraphe />
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 import "./Apropos.css";
+import React from "react";
 
 const Apropos = () => {
   return (
