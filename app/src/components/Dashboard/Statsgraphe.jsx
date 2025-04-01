@@ -1,15 +1,7 @@
 import React from "react";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, BarChart, Bar, PieChart, Pie, Cell, Legend, ResponsiveContainer } from "recharts";
+import TimeBasedAdhesion from "./RecupAdhesions";
 
-const adhesionData = [
-    { date: "2024-01-01", nombre: 30 },
-    { date: "2024-01-02", nombre: 40 },
-    { date: "2024-01-03", nombre: 50 },
-    { date: "2024-01-04", nombre: 60 },
-    { date: "2024-01-05", nombre: 70 },
-    { date: "2024-01-06", nombre: 80 },
-    { date: "2024-01-07", nombre: 90 },
-];
 
 const participantData = [
   { seance: "Séance 1", participants: 10 },
@@ -30,10 +22,10 @@ const Statsgraphes = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Courbe Nombre Adhésions / Date */}
           <div className="bg-white p-4 rounded-xl shadow-lg"  style={{ width: "450px" }}>
-            <h2 className="text-lg font-semibold mb-4">Nombre d'adhésions par date</h2>
+            <h2 className="text-lg font-semibold mb-4">Nombre d'adhésions par mois</h2>
 
             <ResponsiveContainer width="100%" height={200}>
-              <LineChart data={adhesionData}>
+              <LineChart data={TimeBasedAdhesion()}>
                 <CartesianGrid strokeDasharray="7 7" />
                 <XAxis dataKey="date" />
                 <XAxis dataKey="date" interval={7} /> 

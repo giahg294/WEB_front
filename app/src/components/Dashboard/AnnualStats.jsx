@@ -1,6 +1,6 @@
 import React from "react";
-import "./AnnualStats.css"
-import Sidebar from "./Sidebar"
+import "./AnnualStats.css";
+import Sidebar from "./Sidebar";
 import Statsgraphe from "./Statsgraphe"; 
 
 function AnnualStats() {
