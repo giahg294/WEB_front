@@ -10,7 +10,7 @@ const TimeBasedAdhesion = () => {
                 if (data.growthData) {
                     const formattedData = data.growthData.map(item => ({
                         date: item.x,
-                        nombre: item.y
+                        NombreAdhesions: item.y
                     }));
                     setNbAdhesions(formattedData);
                 }
