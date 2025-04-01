@@ -17,7 +17,7 @@ function ListAdhesion() {
         <div key={index} className="adhesion">
           <h1>{event.nom}</h1>
           <a href={event.url} target="_blank" rel="noopener noreferrer">
-            <button>Je participe !</button>
+            <button>J'adhère !</button>
           </a>
         </div>
       ))}
