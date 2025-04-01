@@ -18,7 +18,7 @@ const abonnesData = [
 
 const Statsgraphes = () => {
     return (
-      <div className="p-6 min-h-screen"> {/* 设置统一的背景颜色 */}
+      <div className="p-6 min-h-screen">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Courbe Nombre Adhésions / Date */}
           <div className="bg-white p-4 rounded-xl shadow-lg"  style={{ width: "450px" }}>

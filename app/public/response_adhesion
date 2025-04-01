@@ -1,6 +1,22 @@
-{"data":
-    [
-        {"nom":"Prix de l'adhésion : 3€ ",
-            "url":"https://www.helloasso-sandbox.com/associations/fouch-a-cheval/adhesions/adhesion-2024-2025-sport"}
+{
+    "data": [
+      {
+        "nom": "Adhésion : 3€",
+        "url": "https://www.helloasso-sandbox.com/associations/fouch-a-cheval/adhesions/adhesion-2024-2025-sport"
+      },
+
+      {
+        "nom": "Abonnement réduit : 20 euros",
+        "url": "https://www.helloasso-sandbox.com/associations/fouch-a-cheval/evenements/test-qtite-max"
+      },
+      {
+        "nom": "Abonnement normal : 30 euros",
+        "url": "https://www.helloasso-sandbox.com/associations/fouch-a-cheval/evenements/test-qtite-max"
+      },
+
+      {
+        "nom": "Bonnet INSAQUATIC : 10 euros",
+        "url": "https://www.helloasso-sandbox.com/associations/fouch-a-cheval/evenements/zadefgrthgez"
+      }
     ]
-}
+  }
