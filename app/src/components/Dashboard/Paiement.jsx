@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import Sidebar from './Sidebar';
+import Paiements from './RecupPaiements';
 
 function PaiementPage() {
+  {/*}
   const paiementData = [
     { nom: 'Yass', email: 'yass123@gmail.com', type:'bonnet', prix: '€12.00', paydate: '05/01/2025' },
     { nom: 'Lhomme', email: 'lhomme123@gmail.com', type:'adhesion', prix: '€20.00', paydate: '09/01/2025' },
@@ -20,7 +22,9 @@ function PaiementPage() {
     { nom: 'paris', email: 'hilton@gmail.com', type:'abonnement normal', prix: '€50.00', paydate: '20/03/2025' },
     { nom: 'rafayel', email: 'moartstudio@gmail.com', type:'adhesion', prix: '€20.00', paydate: '23/03/2025' },
     { nom: 'sylus', email: 'andian@gmail.com', type:'abonnement normal', prix: '€50.00', paydate: '02/04/2025' }
-  ];
+  ]; */}
+
+  const paiementData = Paiements();
 
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
@@ -30,7 +34,6 @@ function PaiementPage() {
   const currentItems = paiementData.slice(indexOfFirstItem, indexOfLastItem);
 
   const totalPages = Math.ceil(paiementData.length / itemsPerPage);
-
   const nextPage = () => {
     if (currentPage < totalPages) {
       setCurrentPage(currentPage + 1);
