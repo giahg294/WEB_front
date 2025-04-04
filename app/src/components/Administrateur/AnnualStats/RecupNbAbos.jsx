@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
+import back_port from "../../../connexion";
 
 const NbAbos = () => {
     const [pistocheAboTotal, setPistocheAboTotal] = useState(0);
     const [pistocheAboTRTotal, setPistocheAboTRTotal] = useState(0);
 
     useEffect(() => {
-        fetch("http://localhost:4000/stats/getParticipantsDetailsByEvent")
+        fetch(back_port()+"/stats/getParticipantsDetailsByEvent")
             .then((response) => response.json())
             .then((data) => {
                 if (Array.isArray(data)) {

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import back_port from "../../../connexion";
 
 const ParticipantsByEvent = (selectedDate) => {
     const [nbParticipants, setNbParticipants] = useState({
@@ -11,7 +12,7 @@ const ParticipantsByEvent = (selectedDate) => {
     useEffect(() => {
         if (!selectedDate) return; // Ne fait rien si aucune date sélectionnée
 
-        fetch("http://localhost:4000/stats/getParticipantsDetailsByEvent")
+        fetch(back_port()+"/stats/getParticipantsDetailsByEvent")
             .then((response) => response.json())
             .then((data) => {
                 const eventData = data.find(event => event.date === selectedDate);

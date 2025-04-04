@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
+import back_port from "../../../connexion";
 
 const NbEntreesTN_TR = () => {
     const [pistocheTN, setPistocheTN] = useState(0);
     const [pistocheTR, setPistocheTR] = useState(0);
 
     useEffect(() => {
-        fetch("http://localhost:4000/stats/getParticipantsDetailsByEvent")
+        fetch(back_port()+"/stats/getParticipantsDetailsByEvent")
             .then((response) => response.json())
             .then((data) => {
                 if (Array.isArray(data)) {

@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
+import back_port from "../../../connexion";
 
 const Paiements = () => {
     const [listePaiements, setListePaiements] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:4000/stats/getPayment")
+        fetch(back_port()+"/stats/getPayment")
             .then((response) => response.json())
             .then((data) => {
                 if (data) {
