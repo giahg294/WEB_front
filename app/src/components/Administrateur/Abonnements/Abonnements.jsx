@@ -35,21 +35,17 @@ function AbonnementPage() {
         <table className="min-w-full table-auto">
           <thead>
             <tr className="bg-blue-100 text-blue-800">
+              <th className="px-6 py-3 text-left text-sm font-medium">Prenom</th>
               <th className="px-6 py-3 text-left text-sm font-medium">Nom</th>
-              <th className="px-6 py-3 text-left text-sm font-medium">Email</th>
-              <th className="px-6 py-3 text-left text-sm font-medium">Type de transaction</th>
-              <th className="px-6 py-3 text-left text-sm font-medium">Montant</th>
-              <th className="px-6 py-3 text-left text-sm font-medium">Date de transaction</th>
+              <th className="px-6 py-3 text-left text-sm font-medium">Evenements</th>
             </tr>
           </thead>
           <tbody>
             {currentItems.map((item, index) => (
               <tr key={index} className={`border-t ${index % 2 === 0 ? 'bg-gray-50' : 'bg-gray-100'}`}>
+                <td className="px-6 py-4 text-sm">{item.prenom}</td>
                 <td className="px-6 py-4 text-sm">{item.nom}</td>
-                <td className="px-6 py-4 text-sm">{item.email}</td>
-                <td className="px-6 py-4 text-sm">{item.type}</td>
-                <td className="px-6 py-4 text-sm">{item.prix}</td>
-                <td className="px-6 py-4 text-sm">{item.paydate}</td>
+                <td className="px-6 py-4 text-sm">{item.nom_event}</td>
               </tr>
             ))}
           </tbody>
