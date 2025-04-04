@@ -25,13 +25,13 @@ class Seance extends Component {
     const { date, entreeTN, entreeTR, abonnementTN, abonnementTR } = this.props;
 
     return (
-      <div className="bg-blue-100 p-6 rounded-lg shadow-lg mb-4">
+      <div className="bg-blue-100 p-6 rounded-lg shadow-lg mb-4" style={{ marginTop: '100px' }}>
         <h2 className="text-xl font-semibold text-blue-800 mb-4">
           Créneau piscine - {date}
         </h2>
         
         <p className="text-lg text-gray-700 mb-6">
-          <strong>Status :</strong> {this.isPast() ? "Passé 🏊‍♂️" : "À venir 📅"}
+          <strong>Statut :</strong> {this.isPast() ? "Passé 🏊‍♂️" : "À venir 📅"}
         </p>
 
         <div className="space-y-4">

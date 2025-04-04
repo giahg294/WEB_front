@@ -17,22 +17,36 @@ function Sidebar() {
               to="/admin/annual"
               className={`items ${location.pathname === "/admin/annual" ? "active" : ""}`}
             >
-              <img src="/maison.png" alt="home" className="icon" />
+              <img src="/home.svg" alt="home" className="icon" />
               Statistiques annuelles
             </Link>
             <Link
               to="/admin/seance"
               className={`items ${location.pathname === "/admin/seance" ? "active" : ""}`}
             >
-              <img src="/stat.png" alt="stat" className="icon" />
+              <img src="/stats.svg" alt="stat" className="icon" />
               Séances
             </Link>
             <Link
               to="/admin/paiements"
               className={`items ${location.pathname === "/admin/paiements" ? "active" : ""}`}
             >
-              <img src="/paiement.png" alt="money" className="icon" />
+              <img src="/money.svg" alt="money" className="icon" />
               Paiements
+            </Link>
+            <Link
+              to="/admin/abonnements"
+              className={`items ${location.pathname === "/admin/abonnements" ? "active" : ""}`}
+            >
+              <img src="/etoile.svg" alt="money" className="icon" />
+              Abonnements
+            </Link>
+            <Link
+              to="/admin/illegaux"
+              className={`items ${location.pathname === "/admin/illegaux" ? "active" : ""}`}
+            >
+              <img src="/etoile.svg" alt="money" className="icon" />
+              Illegaux
             </Link>
           </li>
         </ul>

@@ -5,9 +5,9 @@ function ListAdhesion() {
 
   // Récupération du JSON
   useEffect(() => {
-    fetch('/response_adhesion')
+    fetch('http://localhost:4000/stats/getAdhesion')
       .then((response) => response.json())
-      .then((data) => setEvents(data.data))
+      .then((data) => setEvents(data || []))
       .catch((error) => console.error('Erreur de chargement:', error));
   }, []);
 
