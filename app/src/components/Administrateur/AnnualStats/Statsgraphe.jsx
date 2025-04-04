@@ -28,7 +28,7 @@ const Statsgraphes = () => {
       ];
 
     return (
-      <div className="p-6 min-h-screen">
+      <div className="p-6 min-h-stat">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Courbe Nombre Adhésions / Mois */}
           <div className="bg-white p-4 rounded-xl shadow-lg"  style={{ width: "450px" }}>

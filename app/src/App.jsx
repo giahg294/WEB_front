@@ -5,9 +5,11 @@ import Home from "./components/Home/Home";
 import Adhesion from "./components/Adhesion/Adhesion";
 import Evenements from "./components/Events/Evenements";
 import Auth from "./components/Authentification/Auth";
-import Paiement from "./components/Dashboard/Paiement";
-import AnnualStats from "./components/Dashboard/AnnualStats";
-import SeanceStats from "./components/Dashboard/SeanceStats";
+import Paiement from "./components/Administrateur/Paiement/Paiement";
+import AnnualStats from "./components/Administrateur/AnnualStats/AnnualStats";
+import SeanceStats from "./components/Administrateur/Seances/SeanceStats";
+import AbonnementPage from "./components/Administrateur/Abonnements/Abonnements";
+import IllegauxPage from "./components/Administrateur/Illegaux/Illegaux";
 import ProtectedRoute from "./components/Authentification/ProtectedRoute";
 
 
@@ -44,6 +46,8 @@ function App() {
           </ProtectedRoute>
         } 
       />
+        <Route path="/admin/abonnements" element={<AbonnementPage />} />
+        <Route path="/admin/illegaux" element={<IllegauxPage />} />
       </Routes>
     </Router>
   </>

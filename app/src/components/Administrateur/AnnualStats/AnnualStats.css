@@ -8,15 +8,18 @@
 
 .tableau-paiement{
     display: flex;
+    height: 70vh;
     flex-direction: column;
     margin : 20px;
 }
 .bot-paiement{
     display: flex;
+    height: 10vh;
     padding: 10px;
     justify-content: space-around;
 }
 .ad-titre{
+    background-color: #f0f8ff;
     display: flex;
     padding: 20px;
     justify-content: baseline;
@@ -26,9 +29,20 @@
     color: #000000;
     font-weight: bold;
     letter-spacing: 2px;
+    height: 10vh;
 }
 .ad-contenu{
     display:flex;
     padding: 20px;
     width: 100%;
+}
+
+.stats-container{
+    display: flex;
+}
+
+.stats-box{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
 }
