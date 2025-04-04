@@ -2,21 +2,25 @@
     "data": [
       {
         "nom": "Adhésion : 3€",
-        "url": "https://www.helloasso-sandbox.com/associations/fouch-a-cheval/adhesions/adhesion-2024-2025-sport"
+        "url": "https://www.helloasso-sandbox.com/associations/fouch-a-cheval/adhesions/adhesion-2024-2025-sport",
+        "descript": "Pour participer à nos événements, l'adhésion est obligatoire . En adhérant, vous soutenez notre association et vous obtenez également la possibilité de participer à la prise de décision de l'association."
       },
 
       {
         "nom": "Abonnement réduit : 20 euros",
-        "url": "https://www.helloasso-sandbox.com/associations/fouch-a-cheval/evenements/test-qtite-max"
+        "url": "https://www.helloasso-sandbox.com/associations/fouch-a-cheval/evenements/test-qtite-max",
+        "descript": "Cet abonnement vous permet de nager autant de fois que vous le souhaitez pendant un semestre entier. Pour souscrire à cet abonnement, vous devez être titulaire d'une carte VA Avantages ou être licencié(e) par l'AS."
       },
       {
         "nom": "Abonnement normal : 30 euros",
-        "url": "https://www.helloasso-sandbox.com/associations/fouch-a-cheval/evenements/test-qtite-max"
+        "url": "https://www.helloasso-sandbox.com/associations/fouch-a-cheval/evenements/test-qtite-max",
+        "descript":"Cet abonnement vous permet de nager autant de fois que vous le souhaitez pendant un semestre entier. "
       },
 
       {
-        "nom": "Bonnet INSAQUATIC : 10 euros",
-        "url": "https://www.helloasso-sandbox.com/associations/fouch-a-cheval/evenements/zadefgrthgez"
+        "nom": "Bonnet : 10 euros",
+        "url": "https://www.helloasso-sandbox.com/associations/fouch-a-cheval/evenements/zadefgrthgez",
+        "descript": "Achetez notre Bonnet de bain !"
       }
     ]
   }
