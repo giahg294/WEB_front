@@ -28,14 +28,22 @@
 }
 
 .ad-contenu{
-
+    height: 100%;
+    width: 100%;
     justify-content: flex-start;
 }
 
+.semestre{
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+}
+
 .ad-data{
-    margin: 100px;
+    display: flex;
+    align-items: center;
     height: 100%;
-    width: 100%;
+
 }
 
 .ad-items-container{
