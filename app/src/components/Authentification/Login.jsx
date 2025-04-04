@@ -5,7 +5,7 @@ function Login() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState(""); 
-    
+    const navigate = useNavigate();
 
     async function handleLogin(e){
         e.preventDefault();
@@ -19,8 +19,13 @@ function Login() {
             });
 
             const res = await response.json();
-            window.location.href = "/admin/annual";
-        } 
+            if (response.ok) {
+                navigate("/admin/annual");
+              } else {
+                const errorText = await response.text();
+                setError(errorText || "Invalid credentials");
+              }
+                      } 
         catch (err) {
             setError("Invalid credentials, please try again.");
             console.error("Login failed:", err);
