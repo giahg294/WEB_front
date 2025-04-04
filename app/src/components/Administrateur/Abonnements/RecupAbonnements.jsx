@@ -2,26 +2,27 @@ import { useState, useEffect } from "react";
 import back_port from "../../../connexion";
 
 const Abonnement = () => {
-    const [listeAbonnements, setListeAbonnements] = useState([]);
+    const [abonnements, setAbonnements] = useState([]);
 
     useEffect(() => {
-        fetch(back_port()+"/stats/getPayment")
+        fetch(back_port() + "/stats/getPayment")
             .then((response) => response.json())
             .then((data) => {
                 if (data) {
-                    const formattedData = data.map(item => ({
-                        nom_evenement: item.nom,  
-                        abonnementUrl: item.abonnementUrl,  
-                        listeParticipants: item.participants
-                    }));
-                    setListeAbonnements(formattedData);
+                    const formattedData = data.flatMap(item => 
+                        item.participants.map(participant => ({
+                            prenom: participant.prenom,
+                            nom: participant.nom,
+                            nom_event: item.nom
+                        }))
+                    );
+                    setAbonnements(formattedData);
                 }
             })
             .catch((error) => console.error("Erreur:", error));
     }, []);
 
-    return listeAbonnements;
+    return abonnements;
 };
 
 export default Abonnement;
-
