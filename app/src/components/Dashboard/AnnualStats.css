@@ -19,6 +19,7 @@
     justify-content: space-around;
 }
 .ad-titre{
+    background-color: #f0f8ff;
     display: flex;
     padding: 20px;
     justify-content: baseline;
