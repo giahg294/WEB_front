@@ -41,6 +41,13 @@ function Sidebar() {
               <img src="/etoile.svg" alt="money" className="icon" />
               Abonnements
             </Link>
+            <Link
+              to="/admin/illegaux"
+              className={`items ${location.pathname === "/admin/illegaux" ? "active" : ""}`}
+            >
+              <img src="/etoile.svg" alt="money" className="icon" />
+              Illegaux
+            </Link>
           </li>
         </ul>
       </nav>
