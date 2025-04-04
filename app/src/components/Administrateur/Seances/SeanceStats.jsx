@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import moment from "moment";
 import Seance from "./Seance";
-import Sidebar from "./Sidebar";
+import Sidebar from "../Sidebar";
 import EventDates from "./RecupDates";
 import ParticipantsByEvent from "./RecupParticipants";
 import "./SeanceStats.css";

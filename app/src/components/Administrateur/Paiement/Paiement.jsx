@@ -1,19 +1,39 @@
 import React, { useState } from 'react';
-import Sidebar from './Sidebar';
-import Abonnement from './RecupAbonnements';
+import Sidebar from '../Sidebar';
+import Paiements from './RecupPaiements';
 
-function AbonnementPage() {
+function PaiementPage() {
+  {/*}
+  const paiementData = [
+    { nom: 'Yass', email: 'yass123@gmail.com', type:'bonnet', prix: '€12.00', paydate: '05/01/2025' },
+    { nom: 'Lhomme', email: 'lhomme123@gmail.com', type:'adhesion', prix: '€20.00', paydate: '09/01/2025' },
+    { nom: 'Giaaa', email: 'giaaa123@gmail.com', type:'abonnement normal', prix: '€50.00', paydate: '05/02/2025' },
+    { nom: 'Marine', email: 'marine123@gmail.com', type:'abonnement reduit', prix: '€40.00', paydate: '15/02/2025' },
+    { nom: 'Bianca', email: 'bianca123@gmail.com', type:'abonnement normal', prix: '€50.00', paydate: '15/02/2025' },
+    { nom: 'feifei', email: 'feifei123@gmail.com', type:'abonnement normal', prix: '€50.00', paydate: '20/02/2025' },
+    { nom: 'David', email: 'daviddd@gmail.com', type:'abonnement normal', prix: '€50.00', paydate: '25/02/2025' },
+    { nom: 'Rosa', email: 'rosaaa@gmail.com', type:'abonnement reduit', prix: '€40.00', paydate: '26/02/2025' },
+    { nom: 'Lise', email: 'liseee@gmail.com', type:'abonnement normal', prix: '€50.00', paydate: '27/02/2025' },
+    { nom: 'aumeurierr', email: 'aumeurierr@gmail.com', type:'abonnement normal', prix: '€50.00', paydate: '01/03/2025' },
+    { nom: 'anonymaaa', email: 'anonymaaa@gmail.com', type:'abonnement normal', prix: '€50.00', paydate: '02/03/2025' },
+    { nom: 'balefankanni', email: 'balefankanni@gmail.com', type:'abonnement normal', prix: '€50.00', paydate: '11/03/2025' },
+    { nom: 'skrskrr', email: 'skkrr@gmail.com', type:'adhesion', prix: '€20.00', paydate: '16/03/2025' },
+    { nom: 'flex', email: 'flexibleflex@gmail.com', type:'bonnet', prix: '€12.00', paydate: '20/03/2025' },
+    { nom: 'paris', email: 'hilton@gmail.com', type:'abonnement normal', prix: '€50.00', paydate: '20/03/2025' },
+    { nom: 'rafayel', email: 'moartstudio@gmail.com', type:'adhesion', prix: '€20.00', paydate: '23/03/2025' },
+    { nom: 'sylus', email: 'andian@gmail.com', type:'abonnement normal', prix: '€50.00', paydate: '02/04/2025' }
+  ]; */}
 
-  const abonnementData = Abonnement();
+  const paiementData = Paiements();
 
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = abonnementData.slice(indexOfFirstItem, indexOfLastItem);
+  const currentItems = paiementData.slice(indexOfFirstItem, indexOfLastItem);
 
-  const totalPages = Math.ceil(abonnementData.length / itemsPerPage);
+  const totalPages = Math.ceil(paiementData.length / itemsPerPage);
   const nextPage = () => {
     if (currentPage < totalPages) {
       setCurrentPage(currentPage + 1);
@@ -29,7 +49,7 @@ function AbonnementPage() {
   return (
     <div className="ad-page">
       <Sidebar/>
-      <h1 className="ad-titre">Liste des abonnements</h1>
+      <h1 className="ad-titre">Liste des paiements</h1>
 
       <div className="tableau-paiement">
         <table className="min-w-full table-auto">
@@ -78,4 +98,4 @@ function AbonnementPage() {
   );
 }
 
-export default AbonnementPage;
+export default PaiementPage;
