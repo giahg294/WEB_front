@@ -68,32 +68,34 @@ function SeanceStats() {
       
       {/* Contenu principal */}
       <div className="ad-contenu">
-        {/* Semestre 1 */}
-        <div className="ad-box">
-          <h1 className="ad-titre">Semestre 1</h1>
-          {semester1Dates.length > 0 &&
-            semester1Dates.map((date) => (
-              <div key={date} className="ad-items">
-                <MyButton
-                  ButtonText={moment(date).format("DD MMMM YYYY")}
-                  onClick={() => setSelectedDate(date)}
-                />
-              </div>
-            ))}
-        </div>
+        <div className="semestre">
+          {/* Semestre 1 */}
+          <div className="ad-box">
+            <h1 className="ad-titre">Semestre 1</h1>
+            {semester1Dates.length > 0 &&
+              semester1Dates.map((date) => (
+                <div key={date} className="ad-items">
+                  <MyButton
+                    ButtonText={moment(date).format("DD MMMM YYYY")}
+                    onClick={() => setSelectedDate(date)}
+                  />
+                </div>
+              ))}
+          </div>
 
-        {/* Semestre 2 */}
-        <div className="ad-box">
-          <h1 className="ad-titre">Semestre 2</h1>
-          {semester2Dates.length > 0 &&
-            semester2Dates.map((date) => (
-              <div key={date} className="ad-items">
-                <MyButton
-                  ButtonText={moment(date).format("DD MMMM YYYY")}
-                  onClick={() => setSelectedDate(date)}
-                />
-              </div>
-            ))}
+          {/* Semestre 2 */}
+          <div className="ad-box">
+            <h1 className="ad-titre">Semestre 2</h1>
+            {semester2Dates.length > 0 &&
+              semester2Dates.map((date) => (
+                <div key={date} className="ad-items">
+                  <MyButton
+                    ButtonText={moment(date).format("DD MMMM YYYY")}
+                    onClick={() => setSelectedDate(date)}
+                  />
+                </div>
+              ))}
+          </div>
         </div>
 
         {/* Détails de la séance sélectionnée */}

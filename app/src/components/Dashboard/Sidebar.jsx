@@ -25,7 +25,7 @@ function Sidebar() {
               className={`items ${location.pathname === "/admin/seance" ? "active" : ""}`}
             >
               <img src="/stat.png" alt="stat" className="icon" />
-              Statistiques par séances
+              Séances
             </Link>
             <Link
               to="/admin/paiements"
