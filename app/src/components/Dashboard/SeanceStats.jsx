@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import moment from "moment";
 import Seance from "./Seance";
 import Sidebar from "./Sidebar";
-import EventDates from "./RecupData";
+import EventDates from "../RecupData";
 import "./SeanceStats.css";
 
 function MyButton({ ButtonText, onClick }) {
@@ -14,7 +14,7 @@ function MyButton({ ButtonText, onClick }) {
 }
 
 function SeanceStats() {
-  const listeDates = EventDates();
+  const listeDates = EventDates("dates");
   const semester1Dates = listeDates.filter(date => moment(date).isBefore("2025-02-08"));
   const semester2Dates = listeDates.filter(date => moment(date).isSameOrAfter("2025-02-08"));
 

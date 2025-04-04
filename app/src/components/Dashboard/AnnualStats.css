@@ -1,11 +1,21 @@
 .ad-page{
-    display: flex;
+    display: fixed;
     background: rgb(231, 236, 238);
     flex-direction: column;
     margin-left: 250px;
     height: 100vh;
 }
 
+.tableau-paiement{
+    display: flex;
+    flex-direction: column;
+    margin : 20px;
+}
+.bot-paiement{
+    display: flex;
+    padding: 10px;
+    justify-content: space-around;
+}
 .ad-titre{
     display: flex;
     padding: 20px;
@@ -20,6 +30,5 @@
 .ad-contenu{
     display:flex;
     padding: 20px;
-    height: 100%;
     width: 100%;
 }

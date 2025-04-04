@@ -7,6 +7,7 @@
   object-fit: cover;
   z-index: -1;
 }
+
 .imageGroupe{
   display: flex;
   padding: 10px;

@@ -46,9 +46,9 @@ function PaiementPage() {
   return (
     <div className="ad-page">
       <Sidebar/>
-      <h1 className="text-3xl font-bold text-center text-gray-800 mb-6">Liste des paiements</h1>
+      <h1 className="ad-titre">Liste des paiements</h1>
 
-      <div className="overflow-x-auto bg-white shadow-lg rounded-lg">
+      <div className="tableau-paiement">
         <table className="min-w-full table-auto">
           <thead>
             <tr className="bg-blue-100 text-blue-800">
@@ -74,7 +74,7 @@ function PaiementPage() {
       </div>
 
       {/* Pagination */}
-      <div className="flex justify-between items-center mt-4">
+      <div className="bot-paiement">
         <button
           onClick={prevPage}
           disabled={currentPage === 1}
