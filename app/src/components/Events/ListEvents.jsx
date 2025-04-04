@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import EventDates from '../RecupData';
 
 function ListEvents() {
   const [events, setEvents] = useState([]);
@@ -14,7 +13,7 @@ function ListEvents() {
 
   return (
     <div className="events-container">
-      {EventDates("event-card").map((event, index) => (
+      {events.map((event, index) => (
         <div key={index} className="event-card">
           <h3>{event.nom}</h3>
           <a href={event.url} target="_blank" rel="noopener noreferrer">
