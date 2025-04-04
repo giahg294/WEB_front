@@ -13,9 +13,9 @@ function Login() {
             const response = await fetch("http://localhost:4000/api/users/login", {
                 method : 'POST',
                 headers:  {'Content-Type':'application/json'},
+                credentials: "include",
                 body: JSON.stringify({username, password}),
             },{
-                withCredentials: true
             });
 
             const res = await response.json();
@@ -47,6 +47,7 @@ function Login() {
                 <button type="submit">
                     Login
                 </button>
+                {error && <p style={{ color: "red" }}>{error}</p>}
             </form>
         </div>      
     );

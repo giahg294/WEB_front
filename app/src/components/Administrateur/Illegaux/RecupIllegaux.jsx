@@ -10,9 +10,10 @@ const Illegaux = () => {
             .then((data) => {
                 if (data) {
                     const formattedData = data.map(item => ({
-                        prenom: item.prenom,
                         nom: item.nom,  
-                        email: item.email
+                        prenom: item.prenom,
+                        email: item.email,
+                        adhesion: item.adhesion,
                     }));
                     setIllegaux(formattedData);
                 }
