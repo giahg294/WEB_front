@@ -3,16 +3,18 @@
     background: rgb(231, 236, 238);
     flex-direction: column;
     margin-left: 250px;
-    height: 100vh;
+    height: 100%;
 }
 
 .tableau-paiement{
     display: flex;
+    height: 70vh;
     flex-direction: column;
     margin : 20px;
 }
 .bot-paiement{
     display: flex;
+    height: 10vh;
     padding: 10px;
     justify-content: space-around;
 }
@@ -26,6 +28,7 @@
     color: #000000;
     font-weight: bold;
     letter-spacing: 2px;
+    height: 10vh;
 }
 .ad-contenu{
     display:flex;
