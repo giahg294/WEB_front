@@ -8,6 +8,7 @@ import Auth from "./components/Authentification/Auth";
 import Paiement from "./components/Dashboard/Paiement";
 import AnnualStats from "./components/Dashboard/AnnualStats";
 import SeanceStats from "./components/Dashboard/SeanceStats";
+import ProtectedRoute from "./components/Authentification/ProtectedRoute";
 
 
 function App() {
@@ -19,9 +20,30 @@ function App() {
         <Route path="/adhesion" element={<Adhesion />} />
         <Route path="/events" element={<Evenements />} />
         <Route path="/admin" element={<Auth />} />
-        <Route path="/admin/annual" element={<AnnualStats />} />
-        <Route path="/admin/seance" element={<SeanceStats />} />
-        <Route path="/admin/paiements" element={<Paiement />} />
+        <Route 
+          path="/admin/annual" 
+          element={
+            <ProtectedRoute>
+              <AnnualStats />
+            </ProtectedRoute>
+          } 
+        />
+        <Route 
+          path="/admin/annual" 
+          element={
+            <ProtectedRoute>
+              <SeanceStats />
+            </ProtectedRoute>
+          } 
+        />
+        <Route 
+        path="/admin/annual" 
+        element={
+          <ProtectedRoute>
+            <Paiement />
+          </ProtectedRoute>
+        } 
+      />
       </Routes>
     </Router>
   </>
