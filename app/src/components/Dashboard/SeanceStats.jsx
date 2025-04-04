@@ -2,12 +2,8 @@ import React, { useState, useEffect } from "react";
 import moment from "moment";
 import Seance from "./Seance";
 import Sidebar from "./Sidebar";
-<<<<<<< HEAD
-import EventDates from "../RecupData";
-=======
 import EventDates from "./RecupDates";
 import ParticipantsByEvent from "./RecupParticipants";
->>>>>>> b1b01d8958862b7339ade580b7636bc8392902fc
 import "./SeanceStats.css";
 
 function MyButton({ ButtonText, onClick }) {
