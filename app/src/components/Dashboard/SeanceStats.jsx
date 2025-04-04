@@ -1,8 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import moment from "moment";
 import Seance from "./Seance";
 import Sidebar from "./Sidebar";
+<<<<<<< HEAD
 import EventDates from "../RecupData";
+=======
+import EventDates from "./RecupDates";
+import ParticipantsByEvent from "./RecupParticipants";
+>>>>>>> b1b01d8958862b7339ade580b7636bc8392902fc
 import "./SeanceStats.css";
 
 function MyButton({ ButtonText, onClick }) {
@@ -19,10 +24,9 @@ function SeanceStats() {
   const semester2Dates = listeDates.filter(date => moment(date).isSameOrAfter("2025-02-08"));
 
   const [selectedDate, setSelectedDate] = useState(null);
-
   const [seancesData, setSeancesData] = useState({});
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (listeDates.length > 0) {
       const newSeancesData = listeDates.reduce((acc, date) => {
         acc[date] = {
@@ -36,6 +40,23 @@ function SeanceStats() {
       setSeancesData(newSeancesData);
     }
   }, [listeDates]);
+
+  // Récupération des participants pour l'événement sélectionné
+  const participants = ParticipantsByEvent(selectedDate);
+
+  useEffect(() => {
+    if (participants && selectedDate) {
+      setSeancesData(prev => ({
+        ...prev,
+        [selectedDate]: {
+          entreeTN: participants["pistoche-Normal"] || 0,
+          entreeTR: participants["pistoche-TR"] || 0,
+          abonnementTN: participants["pistoche-Abo-Normal"] || 0,
+          abonnementTR: participants["pistoche-Abo-TR"] || 0
+        }
+      }));
+    }
+  }, [participants, selectedDate]);
 
   const updateValue = (date, key, newValue) => {
     setSeancesData(prev => ({
