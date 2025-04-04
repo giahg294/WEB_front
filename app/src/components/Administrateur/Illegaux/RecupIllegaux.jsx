@@ -4,14 +4,15 @@ const Illegaux = () => {
     const [listeIllegaux, setIllegaux] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:4000/stats/getIllegaux")
+        fetch("http://localhost:4000/api/users/getillegaux")
             .then((response) => response.json())
             .then((data) => {
                 if (data) {
                     const formattedData = data.map(item => ({
-                        prenom: item.prenom,
                         nom: item.nom,  
-                        email: item.email
+                        prenom: item.prenom,
+                        email: item.email,
+                        adhesion: item.adhesion,
                     }));
                     setIllegaux(formattedData);
                 }
