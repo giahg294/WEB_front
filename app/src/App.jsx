@@ -8,6 +8,7 @@ import Auth from "./components/Authentification/Auth";
 import Paiement from "./components/Dashboard/Paiement";
 import AnnualStats from "./components/Dashboard/AnnualStats";
 import SeanceStats from "./components/Dashboard/SeanceStats";
+import AbonnementPage from "./components/Dashboard/Abonnements";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/admin/annual" element={<AnnualStats />} />
         <Route path="/admin/seance" element={<SeanceStats />} />
         <Route path="/admin/paiements" element={<Paiement />} />
+        <Route path="/admin/abonnements" element={<AbonnementPage />} />
       </Routes>
     </Router>
   </>
