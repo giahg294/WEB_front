@@ -52,7 +52,7 @@ function Adhesion() {
         </div>
         <div className='ad-container'>
           <p style={{ fontSize: '16px' }}>
-            Découvrez notre <strong>Bonnet de bain</strong>  ———  Championnat Edition Limitée !
+            <strong> Achetez notre Bonnet de bain !</strong>
           </p>
         </div>
         <ListAdhesion />
