@@ -10,6 +10,7 @@ import AnnualStats from "./components/Administrateur/AnnualStats/AnnualStats";
 import SeanceStats from "./components/Administrateur/Seances/SeanceStats";
 import AbonnementPage from "./components/Administrateur/Abonnements/Abonnements";
 import IllegauxPage from "./components/Administrateur/Illegaux/Illegaux";
+import ProtectedRoute from "./components/Authentification/ProtectedRoute";
 
 
 function App() {
@@ -21,9 +22,30 @@ function App() {
         <Route path="/adhesion" element={<Adhesion />} />
         <Route path="/events" element={<Evenements />} />
         <Route path="/admin" element={<Auth />} />
-        <Route path="/admin/annual" element={<AnnualStats />} />
-        <Route path="/admin/seance" element={<SeanceStats />} />
-        <Route path="/admin/paiements" element={<Paiement />} />
+        <Route 
+          path="/admin/annual" 
+          element={
+            <ProtectedRoute>
+              <AnnualStats />
+            </ProtectedRoute>
+          } 
+        />
+        <Route 
+          path="/admin/annual" 
+          element={
+            <ProtectedRoute>
+              <SeanceStats />
+            </ProtectedRoute>
+          } 
+        />
+        <Route 
+        path="/admin/annual" 
+        element={
+          <ProtectedRoute>
+            <Paiement />
+          </ProtectedRoute>
+        } 
+      />
         <Route path="/admin/abonnements" element={<AbonnementPage />} />
         <Route path="/admin/illegaux" element={<IllegauxPage />} />
       </Routes>

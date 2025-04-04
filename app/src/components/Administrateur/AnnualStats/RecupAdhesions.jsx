@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
+import back_port from "../../../connexion";
 
 const TimeBasedAdhesion = () => {
     const [nbAdhesions, setNbAdhesions] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:4000/stats/getTimeBasedAdhesionPayment")
+        fetch(back_port()+"/stats/getTimeBasedAdhesionPayment")
             .then((response) => response.json())
             .then((data) => {
                 if (data.growthData) {

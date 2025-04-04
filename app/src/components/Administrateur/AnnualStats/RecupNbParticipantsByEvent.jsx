@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
+import back_port from "../../../connexion";
 
 const ParticipantsByEvent = () => {
     const [nbParticipants, setNbParticipants] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:4000/stats/getParticipanByEvent")
+        fetch(back_port()+"/stats/getParticipanByEvent")
             .then((response) => response.json())
             .then((data) => {
                 if (Array.isArray(data)) {

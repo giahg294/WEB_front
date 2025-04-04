@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
+import back_port from "../../../connexion";
 
 const Illegaux = () => {
     const [listeIllegaux, setIllegaux] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:4000/api/users/getillegaux")
+        fetch(back_port()+"/stats/getIllegaux")
             .then((response) => response.json())
             .then((data) => {
                 if (data) {

@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import back_port from '../../connexion';
 
 function ListEvents() {
   const [events, setEvents] = useState([]);
 
   // Récupération du JSON
   useEffect(() => {
-    fetch('http://localhost:4000/stats/getEvent')
+    fetch(back_port()+'/stats/getEvent')
       .then((response) => response.json())
       .then((data) => setEvents(data || []))
       .catch((error) => console.error('Erreur de chargement:', error));
