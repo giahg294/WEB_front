@@ -9,6 +9,7 @@ import Paiement from "./components/Dashboard/Paiement";
 import AnnualStats from "./components/Dashboard/AnnualStats";
 import SeanceStats from "./components/Dashboard/SeanceStats";
 import AbonnementPage from "./components/Dashboard/Abonnements";
+import IllegauxPage from "./components/Dashboard/Illegaux";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path="/admin/seance" element={<SeanceStats />} />
         <Route path="/admin/paiements" element={<Paiement />} />
         <Route path="/admin/abonnements" element={<AbonnementPage />} />
+        <Route path="/admin/illegaux" element={<IllegauxPage />} />
       </Routes>
     </Router>
   </>
