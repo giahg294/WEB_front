@@ -7,7 +7,7 @@ function ListEvents() {
   useEffect(() => {
     fetch('http://localhost:4000/stats/getEvent')
       .then((response) => response.json())
-      .then((data) => {setEvents(data || [])})
+      .then((data) => setEvents(data || []))
       .catch((error) => console.error('Erreur de chargement:', error));
   }, []);
 
@@ -15,10 +15,26 @@ function ListEvents() {
     <div className="events-container">
       {events.map((event, index) => (
         <div key={index} className="event-card">
-          <h3>{event.nom}</h3>
-          <a href={event.url} target="_blank" rel="noopener noreferrer">
-            <button>Je participe !</button>
-          </a>
+          <h1>{event.nom}</h1>
+          {event.participantsMax !== null ? (
+            <h2>
+              {event.participants}/{event.participantsMax}
+            </h2>
+          ) : (
+            <h2>
+              {event.participants}/illimités
+            </h2>
+          )}
+
+          {event.participants < event.participantsMax || event.participantsMax === null ?(
+            <a href={event.url} target="_blank" rel="noopener noreferrer">
+              <button>Je participe !</button>
+            </a>
+          ) : (
+            <div>Plus de places</div>
+          )
+          }
+          
         </div>
       ))}
     </div>
