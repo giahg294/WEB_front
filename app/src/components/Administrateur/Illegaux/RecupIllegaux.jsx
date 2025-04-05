@@ -5,7 +5,7 @@ const Illegaux = () => {
     const [listeIllegaux, setIllegaux] = useState([]);
 
     useEffect(() => {
-        fetch(back_port()+"/stats/getIllegaux")
+        fetch(back_port()+"/api/users/getillegaux")
             .then((response) => response.json())
             .then((data) => {
                 if (data) {
