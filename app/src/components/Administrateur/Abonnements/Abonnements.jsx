@@ -1,27 +1,18 @@
-import React, { useState, useEffect } from 'react';
+// AbonnementPage.js
+import React, { useState } from 'react';
 import Sidebar from '../Sidebar';
-import Abonnement from './RecupAbonnements';
+import useAbonnements from './RecupAbonnements';
 
 function AbonnementPage() {
-  const [abonnementData, setAbonnementData] = useState([]);
+  const abonnementData = useAbonnements();
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
-
-  // Récupération des données au montage du composant
-  useEffect(() => {
-    const fetchData = async () => {
-      const data = await Abonnement();  // Attendre la récupération des abonnements
-      setAbonnementData(data);
-    };
-    fetchData();
-  }, []);
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = abonnementData.slice(indexOfFirstItem, indexOfLastItem);
 
   const totalPages = Math.ceil(abonnementData.length / itemsPerPage);
-
   const nextPage = () => {
     if (currentPage < totalPages) {
       setCurrentPage(currentPage + 1);
