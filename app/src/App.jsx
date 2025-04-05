@@ -31,7 +31,7 @@ function App() {
           } 
         />
         <Route 
-          path="/admin/annual" 
+          path="/admin/seance" 
           element={
             <ProtectedRoute>
               <SeanceStats />
@@ -39,7 +39,7 @@ function App() {
           } 
         />
         <Route 
-        path="/admin/annual" 
+        path="/admin/paiements" 
         element={
           <ProtectedRoute>
             <Paiement />
