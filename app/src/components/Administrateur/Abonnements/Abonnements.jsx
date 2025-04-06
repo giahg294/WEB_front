@@ -1,11 +1,10 @@
+// AbonnementPage.js
 import React, { useState } from 'react';
 import Sidebar from '../Sidebar';
-import Abonnement from './RecupAbonnements';
+import useAbonnements from './RecupAbonnements';
 
 function AbonnementPage() {
-
-  const abonnementData = Abonnement();
-
+  const abonnementData = useAbonnements();
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
 
@@ -35,19 +34,25 @@ function AbonnementPage() {
         <table className="min-w-full table-auto">
           <thead>
             <tr className="bg-blue-100 text-blue-800">
-              <th className="px-6 py-3 text-left text-sm font-medium">Prenom</th>
+              <th className="px-6 py-3 text-left text-sm font-medium">Prénom</th>
               <th className="px-6 py-3 text-left text-sm font-medium">Nom</th>
-              <th className="px-6 py-3 text-left text-sm font-medium">Evenements</th>
+              <th className="px-6 py-3 text-left text-sm font-medium">Événement</th>
             </tr>
           </thead>
           <tbody>
-            {currentItems.map((item, index) => (
-              <tr key={index} className={`border-t ${index % 2 === 0 ? 'bg-gray-50' : 'bg-gray-100'}`}>
-                <td className="px-6 py-4 text-sm">{item.prenom}</td>
-                <td className="px-6 py-4 text-sm">{item.nom}</td>
-                <td className="px-6 py-4 text-sm">{item.nom_event}</td>
+            {currentItems.length > 0 ? (
+              currentItems.map((item, index) => (
+                <tr key={index} className={`border-t ${index % 2 === 0 ? 'bg-gray-50' : 'bg-gray-100'}`}>
+                  <td className="px-6 py-4 text-sm">{item.prenom}</td>
+                  <td className="px-6 py-4 text-sm">{item.nom}</td>
+                  <td className="px-6 py-4 text-sm">{item.nom_event}</td>
+                </tr>
+              ))
+            ) : (
+              <tr>
+                <td colSpan="3" className="px-6 py-4 text-center text-sm">Aucun abonnement trouvé.</td>
               </tr>
-            ))}
+            )}
           </tbody>
         </table>
       </div>

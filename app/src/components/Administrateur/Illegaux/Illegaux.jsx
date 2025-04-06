@@ -5,10 +5,10 @@ import Illegaux from './RecupIllegaux';
 function IllegauxPage() {
 
   const illegauxData = Illegaux();
-
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
 
+  
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = illegauxData.slice(indexOfFirstItem, indexOfLastItem);
