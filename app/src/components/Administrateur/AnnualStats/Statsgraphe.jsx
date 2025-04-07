@@ -16,10 +16,10 @@ import useNbEntreesTN_TR from "./RecupRépartitionTN_TR";
 
 
 const Statsgraphes = () => {
-    const { pistocheAboTNTotal, pistocheAboTRTotal } = useNbAbos();
+    const { nbAbosTR, nbAbosTN } = useNbAbos();
     const abonnesData = [
-        { name: "Abonnements TR", value: pistocheAboTRTotal },
-        { name: "Abonnements TN", value: pistocheAboTNTotal },
+        { name: "Abonnements TR", value: nbAbosTR },
+        { name: "Abonnements TN", value: nbAbosTN },
       ];
     const { pistocheTN, pistocheTR } = useNbEntreesTN_TR();
     const entreesData = [

@@ -5,7 +5,7 @@ const useAbonnements = () => {
   const [abonnements, setAbonnements] = useState([]);
 
   useEffect(() => {
-    fetch(back_port() + "/stats/getPayment")
+    fetch(back_port() + "/stats/getAbonnement")
       .then((response) => response.json())
       .then((data) => {
         if (data) {

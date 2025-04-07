@@ -6,26 +6,28 @@ const useNbEntreesTN_TR = () => {
     const [pistocheTR, setPistocheTR] = useState(0);
 
     useEffect(() => {
-        fetch(back_port()+"/stats/getParticipantsDetailsByEvent")
+        fetch(back_port() + "/stats/getParticipantsDetailsByEvent")
             .then((response) => response.json())
             .then((data) => {
                 if (Array.isArray(data)) {
-                    let pistocheTN = 0;
-                    let pistocheTR = 0;
+                    let totalTN = 0;
+                    let totalTR = 0;
 
                     data.forEach(event => {
                         event.eventDetails.forEach(detail => {
-                            if (detail.slug.includes("pistoche-Normal")) {
-                                pistocheTN += detail.nbrParticipants;
+                            const slug = detail.slug.toLowerCase();
+
+                            if (slug.includes("soiree-pistoche-tarif-normal")) {
+                                totalTN += detail.nbrParticipants;
                             }
-                            if (detail.slug.includes("pistoche-TR")) {
-                                pistocheTR += detail.nbrParticipants;
+                            if (slug.includes("soiree-pistoche-tarif-reduit")) {
+                                totalTR += detail.nbrParticipants;
                             }
                         });
                     });
 
-                    setPistocheTN(pistocheTN);
-                    setPistocheTR(pistocheTR);
+                    setPistocheTN(totalTN);
+                    setPistocheTR(totalTR);
                 }
             })
             .catch((error) => console.error("Erreur:", error));

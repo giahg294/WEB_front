@@ -2,36 +2,27 @@ import { useState, useEffect } from "react";
 import back_port from "../../../connexion";
 
 const useNbAbos = () => {
-    const [pistocheAboTotal, setPistocheAboTotal] = useState(0);
-    const [pistocheAboTRTotal, setPistocheAboTRTotal] = useState(0);
+    const [nbAbosTR, setNbAbosTR] = useState(0);
+    const [nbAbosTN, setNbAbosTN] = useState(0);
 
     useEffect(() => {
-        fetch(back_port()+"/stats/getParticipantsDetailsByEvent")
+        fetch(back_port() + "/stats/getAbonnement")
             .then((response) => response.json())
             .then((data) => {
-                if (Array.isArray(data)) {
-                    let aboTotal = 0;
-                    let aboTRTotal = 0;
-
-                    data.forEach(event => {
-                        event.eventDetails.forEach(detail => {
-                            if (detail.slug.includes("pistoche-Abo")) {
-                                aboTotal += detail.nbrParticipants;
-                            }
-                            if (detail.slug.includes("pistoche-Abo-TR")) {
-                                aboTRTotal += detail.nbrParticipants;
-                            }
-                        });
+                if (data) {
+                    data.forEach(item => {
+                        if (item.nom === "abonnement tarif reduit") {
+                            setNbAbosTR(item.participants.length);
+                        } else if (item.nom === "abonnement tarif normal") {
+                            setNbAbosTN(item.participants.length);
+                        }
                     });
-
-                    setPistocheAboTotal(aboTotal);
-                    setPistocheAboTRTotal(aboTRTotal);
                 }
             })
             .catch((error) => console.error("Erreur:", error));
     }, []);
 
-    return { pistocheAboTotal, pistocheAboTRTotal };
+    return { nbAbosTR, nbAbosTN };
 };
 
 export default useNbAbos;
