@@ -35,6 +35,13 @@ function Sidebar() {
               Paiements
             </Link>
             <Link
+              to="/admin/listadhesions"
+              className={`items ${location.pathname === "/admin/listadhesions" ? "active" : ""}`}
+            >
+              <img src="/icons/etoile.svg" alt="money" className="icon" />
+              Adhesions
+            </Link>
+            <Link
               to="/admin/abonnements"
               className={`items ${location.pathname === "/admin/abonnements" ? "active" : ""}`}
             >

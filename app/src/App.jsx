@@ -11,6 +11,7 @@ import SeanceStats from "./components/Administrateur/Seances/SeanceStats";
 import AbonnementPage from "./components/Administrateur/Abonnements/Abonnements";
 import IllegauxPage from "./components/Administrateur/Illegaux/Illegaux";
 import ProtectedRoute from "./components/Authentification/ProtectedRoute";
+import AdhesionPage from "./components/Administrateur/Adhesions/Adhesions";
 
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
           </ProtectedRoute>
         } 
       />
+        <Route path="/admin/listadhesions" element={<AdhesionPage />} />
         <Route path="/admin/abonnements" element={<AbonnementPage />} />
         <Route path="/admin/illegaux" element={<IllegauxPage />} />
       </Routes>
