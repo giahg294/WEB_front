@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import back_port from "../../../connexion";
 
-const TimeBasedAdhesion = () => {
+const useTimeBasedAdhesion = () => {
     const [nbAdhesions, setNbAdhesions] = useState([]);
 
     useEffect(() => {
@@ -22,4 +22,4 @@ const TimeBasedAdhesion = () => {
     return nbAdhesions;
 };
 
-export default TimeBasedAdhesion;
+export default useTimeBasedAdhesion;

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import Sidebar from '../Sidebar';
-import Illegaux from './RecupIllegaux';
+import useIllegaux from './RecupIllegaux';
 
 function IllegauxPage() {
 
-  const illegauxData = Illegaux();
+  const illegauxData = useIllegaux();
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
 

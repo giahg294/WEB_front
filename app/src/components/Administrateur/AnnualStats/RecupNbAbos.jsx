@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import back_port from "../../../connexion";
 
-const NbAbos = () => {
+const useNbAbos = () => {
     const [pistocheAboTotal, setPistocheAboTotal] = useState(0);
     const [pistocheAboTRTotal, setPistocheAboTRTotal] = useState(0);
 
@@ -34,4 +34,4 @@ const NbAbos = () => {
     return { pistocheAboTotal, pistocheAboTRTotal };
 };
 
-export default NbAbos;
+export default useNbAbos;

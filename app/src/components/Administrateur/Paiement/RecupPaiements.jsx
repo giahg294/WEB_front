@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import back_port from "../../../connexion";
 
-const Paiements = () => {
+const usePaiements = () => {
     const [listePaiements, setListePaiements] = useState([]);
 
     useEffect(() => {
@@ -25,5 +25,5 @@ const Paiements = () => {
     return listePaiements;
 };
 
-export default Paiements;
+export default usePaiements;
 

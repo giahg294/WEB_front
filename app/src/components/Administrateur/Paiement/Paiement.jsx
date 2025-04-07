@@ -1,30 +1,16 @@
 import React, { useState } from 'react';
 import Sidebar from '../Sidebar';
-import Paiements from './RecupPaiements';
+import usePaiements from './RecupPaiements';
 
 function PaiementPage() {
   {/*}
   const paiementData = [
     { nom: 'Yass', email: 'yass123@gmail.com', type:'bonnet', prix: '€12.00', paydate: '05/01/2025' },
     { nom: 'Lhomme', email: 'lhomme123@gmail.com', type:'adhesion', prix: '€20.00', paydate: '09/01/2025' },
-    { nom: 'Giaaa', email: 'giaaa123@gmail.com', type:'abonnement normal', prix: '€50.00', paydate: '05/02/2025' },
-    { nom: 'Marine', email: 'marine123@gmail.com', type:'abonnement reduit', prix: '€40.00', paydate: '15/02/2025' },
-    { nom: 'Bianca', email: 'bianca123@gmail.com', type:'abonnement normal', prix: '€50.00', paydate: '15/02/2025' },
-    { nom: 'feifei', email: 'feifei123@gmail.com', type:'abonnement normal', prix: '€50.00', paydate: '20/02/2025' },
-    { nom: 'David', email: 'daviddd@gmail.com', type:'abonnement normal', prix: '€50.00', paydate: '25/02/2025' },
-    { nom: 'Rosa', email: 'rosaaa@gmail.com', type:'abonnement reduit', prix: '€40.00', paydate: '26/02/2025' },
-    { nom: 'Lise', email: 'liseee@gmail.com', type:'abonnement normal', prix: '€50.00', paydate: '27/02/2025' },
-    { nom: 'aumeurierr', email: 'aumeurierr@gmail.com', type:'abonnement normal', prix: '€50.00', paydate: '01/03/2025' },
-    { nom: 'anonymaaa', email: 'anonymaaa@gmail.com', type:'abonnement normal', prix: '€50.00', paydate: '02/03/2025' },
-    { nom: 'balefankanni', email: 'balefankanni@gmail.com', type:'abonnement normal', prix: '€50.00', paydate: '11/03/2025' },
-    { nom: 'skrskrr', email: 'skkrr@gmail.com', type:'adhesion', prix: '€20.00', paydate: '16/03/2025' },
-    { nom: 'flex', email: 'flexibleflex@gmail.com', type:'bonnet', prix: '€12.00', paydate: '20/03/2025' },
-    { nom: 'paris', email: 'hilton@gmail.com', type:'abonnement normal', prix: '€50.00', paydate: '20/03/2025' },
-    { nom: 'rafayel', email: 'moartstudio@gmail.com', type:'adhesion', prix: '€20.00', paydate: '23/03/2025' },
-    { nom: 'sylus', email: 'andian@gmail.com', type:'abonnement normal', prix: '€50.00', paydate: '02/04/2025' }
+
   ]; */}
 
-  const paiementData = Paiements();
+  const paiementData = usePaiements();
 
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;

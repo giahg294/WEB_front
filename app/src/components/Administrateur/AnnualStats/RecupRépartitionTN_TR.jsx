@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import back_port from "../../../connexion";
 
-const NbEntreesTN_TR = () => {
+const useNbEntreesTN_TR = () => {
     const [pistocheTN, setPistocheTN] = useState(0);
     const [pistocheTR, setPistocheTR] = useState(0);
 
@@ -34,4 +34,4 @@ const NbEntreesTN_TR = () => {
     return { pistocheTN, pistocheTR };
 };
 
-export default NbEntreesTN_TR;
+export default useNbEntreesTN_TR;

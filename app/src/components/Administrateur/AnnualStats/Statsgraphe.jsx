@@ -1,9 +1,9 @@
 import React from "react";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, BarChart, Bar, PieChart, Pie, Cell, Legend, ResponsiveContainer } from "recharts";
-import TimeBasedAdhesion from "./RecupAdhesions";
-import ParticipantsByEvent from "./RecupNbParticipantsByEvent";
-import NbAbos from "./RecupNbAbos";
-import NbEntreesTN_TR from "./RecupRépartitionTN_TR";
+import useTimeBasedAdhesion from "./RecupAdhesions";
+import useParticipantsByEvent from "./RecupNbParticipantsByEvent";
+import useNbAbos from "./RecupNbAbos";
+import useNbEntreesTN_TR from "./RecupRépartitionTN_TR";
 
 {/*const participantData = [
   { seance: "Séance 1", participants: 10 },
@@ -16,12 +16,12 @@ import NbEntreesTN_TR from "./RecupRépartitionTN_TR";
 
 
 const Statsgraphes = () => {
-    const { pistocheAboTNTotal, pistocheAboTRTotal } = NbAbos();
+    const { pistocheAboTNTotal, pistocheAboTRTotal } = useNbAbos();
     const abonnesData = [
         { name: "Abonnements TR", value: pistocheAboTRTotal },
         { name: "Abonnements TN", value: pistocheAboTNTotal },
       ];
-    const { pistocheTN, pistocheTR } = NbEntreesTN_TR();
+    const { pistocheTN, pistocheTR } = useNbEntreesTN_TR();
     const entreesData = [
         { name: "Entrées TR", value: pistocheTR },
         { name: "Entrées TN", value: pistocheTN },
@@ -35,7 +35,7 @@ const Statsgraphes = () => {
             <h2 className="text-lg font-semibold mb-4">Nombre d'adhésions par mois</h2>
 
             <ResponsiveContainer width="100%" height={200}>
-              <LineChart data={TimeBasedAdhesion()}>
+              <LineChart data={useTimeBasedAdhesion()}>
                 <CartesianGrid strokeDasharray="7 7" />
                 <XAxis dataKey="date" />
                 <XAxis dataKey="date" interval={7} /> 
@@ -51,7 +51,7 @@ const Statsgraphes = () => {
           <div className="bg-white p-4 rounded-xl shadow-lg" style={{ width: "450px" }}>
             <h2 className="text-lg font-semibold mb-4">Nombre de participants par séance</h2>
             <ResponsiveContainer width="100%" height={200}>
-              <BarChart data={ParticipantsByEvent()}>
+              <BarChart data={useParticipantsByEvent()}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="seance" />
                 <YAxis />

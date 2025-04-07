@@ -1,4 +1,3 @@
-// AbonnementPage.js
 import React, { useState } from 'react';
 import Sidebar from '../Sidebar';
 import useAbonnements from './RecupAbonnements';
@@ -13,6 +12,7 @@ function AbonnementPage() {
   const currentItems = abonnementData.slice(indexOfFirstItem, indexOfLastItem);
 
   const totalPages = Math.ceil(abonnementData.length / itemsPerPage);
+
   const nextPage = () => {
     if (currentPage < totalPages) {
       setCurrentPage(currentPage + 1);

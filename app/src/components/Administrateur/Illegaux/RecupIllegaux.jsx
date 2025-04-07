@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import back_port from "../../../connexion";
 
-const Illegaux = () => {
+const useIllegaux = () => {
     const [listeIllegaux, setIllegaux] = useState([]);
 
     useEffect(() => {
@@ -24,5 +24,5 @@ const Illegaux = () => {
     return listeIllegaux;
 };
 
-export default Illegaux;
+export default useIllegaux;
 

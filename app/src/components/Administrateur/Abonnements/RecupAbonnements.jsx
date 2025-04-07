@@ -1,8 +1,7 @@
-// ./RecupAbonnements.js
 import { useState, useEffect } from "react";
 import back_port from "../../../connexion";
 
-const Abonnements = () => {
+const useAbonnements = () => {
   const [abonnements, setAbonnements] = useState([]);
 
   useEffect(() => {
@@ -26,4 +25,4 @@ const Abonnements = () => {
   return abonnements;
 };
 
-export default Abonnements;
+export default useAbonnements;

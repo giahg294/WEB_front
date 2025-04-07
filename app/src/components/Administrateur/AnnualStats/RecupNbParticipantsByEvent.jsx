@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import back_port from "../../../connexion";
 
-const ParticipantsByEvent = () => {
+const useParticipantsByEvent = () => {
     const [nbParticipants, setNbParticipants] = useState([]);
 
     useEffect(() => {
@@ -22,4 +22,4 @@ const ParticipantsByEvent = () => {
     return nbParticipants;
 };
 
-export default ParticipantsByEvent;
+export default useParticipantsByEvent;
