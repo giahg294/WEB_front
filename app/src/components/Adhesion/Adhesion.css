@@ -22,9 +22,9 @@
 
 .ad-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 100px;
-    padding: 60px;
+    grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+    gap: 10px;
+    padding: 6px;
     justify-items: center;
     justify-content: center;
   }
@@ -35,11 +35,11 @@
     justify-content: space-around;
     background: #f0f8ff;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 103px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 110%;
-    height: 300px;
+    width: 90%;
+    height: 200px;
     transition: transform 0.2s ease;
   }
   
