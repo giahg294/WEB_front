@@ -5,7 +5,7 @@ import useAbonnements from './RecupAbonnements';
 function AbonnementPage() {
   const abonnementData = useAbonnements();
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 9;
+  const itemsPerPage = 8;
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
