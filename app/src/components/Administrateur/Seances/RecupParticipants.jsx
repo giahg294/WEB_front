@@ -3,8 +3,8 @@ import back_port from "../../../connexion";
 
 const ParticipantsByEvent = (selectedDate) => {
     const [nbParticipants, setNbParticipants] = useState({
-        "pistoche-Tarif-Reduit" : 0,
-        "pistoche-Tarif-Normal" : 0
+        "soirée pistoche tarif réduit" : 0,
+        "soirée pistoche tarif normal" : 0
     });
 
     useEffect(() => {
@@ -16,8 +16,8 @@ const ParticipantsByEvent = (selectedDate) => {
                 const eventData = data.find(event => event.date === selectedDate);
                 if (eventData) {
                     const newData = {
-                        "pistoche-Tarif-Reduit": eventData.eventDetails.find(e => e.slug === "soire-pistoche-tarif-reduit")?.nbrParticipants || 0,
-                        "pistoche-Tarif-Normal": eventData.eventDetails.find(e => e.slug === "soire-pistoche-tarif-normal")?.nbrParticipants || 0
+                        "soirée pistoche tarif réduit": eventData.eventDetails.find(e => e.nom === "soirée pistoche tarif réduit")?.nbrParticipants || 0,
+                        "soirée pistoche tarif normal": eventData.eventDetails.find(e => e.nom === "soirée pistoche tarif normal")?.nbrParticipants || 0
                     };
                     setNbParticipants(newData);
                 }
