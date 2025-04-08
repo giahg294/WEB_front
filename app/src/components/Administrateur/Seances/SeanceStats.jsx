@@ -28,8 +28,6 @@ function SeanceStats() {
         acc[date] = {
           entreeTN: 0,
           entreeTR: 0,
-          abonnementTN: 0,
-          abonnementTR: 0
         };
         return acc;
       }, {});
@@ -45,10 +43,8 @@ function SeanceStats() {
       setSeancesData(prev => ({
         ...prev,
         [selectedDate]: {
-          entreeTN: participants["pistoche-Normal"] || 0,
-          entreeTR: participants["pistoche-TR"] || 0,
-          abonnementTN: participants["pistoche-Abo-Normal"] || 0,
-          abonnementTR: participants["pistoche-Abo-TR"] || 0
+          entreeTN: participants["pistoche-Tarif-Normal"] || 0,
+          entreeTR: participants["pistoche-Tarif-Reduit"] || 0,
         }
       }));
     }

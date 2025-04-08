@@ -22,7 +22,7 @@ class Seance extends Component {
   }
 
   render() {
-    const { date, entreeTN, entreeTR, abonnementTN, abonnementTR } = this.props;
+    const { date, entreeTN, entreeTR } = this.props;
 
     return (
       <div className="bg-blue-100 p-6 rounded-lg shadow-lg mb-4" style={{ marginTop: '100px' }}>
@@ -37,8 +37,6 @@ class Seance extends Component {
         <div className="space-y-4">
           {this.renderControl("Entrée Tarif Normal", entreeTN, 'participants')}
           {this.renderControl("Entrée Tarif Réduit", entreeTR, 'participantsAvtg')}
-          {this.renderControl("Abonnement Tarif Normal", abonnementTN, 'adhesions')}
-          {this.renderControl("Abonnement Tarif réduit", abonnementTR, 'bonnetsVendus')}
         </div>
       </div>
     );
