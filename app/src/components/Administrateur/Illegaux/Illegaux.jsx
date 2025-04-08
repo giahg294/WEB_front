@@ -8,7 +8,7 @@ function IllegauxPage() {
   const [currentPage, setCurrentPage] = useState(1);
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
-  const itemsPerPage = 10;
+  const itemsPerPage = 8;
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
