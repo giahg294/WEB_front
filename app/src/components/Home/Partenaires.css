@@ -1,0 +1,34 @@
+.partenaires {
+    text-align: center;
+    margin: 60px 0;
+  }
+  
+  .partenaires-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .partenaires-title .bold {
+    font-weight: bold;
+  }
+  
+  .partenaires-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .partenaires-logos img {
+    height: 50px;
+    object-fit: contain;
+    filter: grayscale(0%);
+    transition: transform 0.3s ease;
+  }
+  
+  .partenaires-logos img:hover {
+    transform: scale(1.1);
+  }
+  

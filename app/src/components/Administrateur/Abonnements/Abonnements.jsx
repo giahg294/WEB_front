@@ -42,7 +42,8 @@ function AbonnementPage() {
           <tbody>
             {currentItems.length > 0 ? (
               currentItems.map((item, index) => (
-                <tr key={index} className={`border-t ${index % 2 === 0 ? 'bg-gray-50' : 'bg-gray-100'}`}>
+                // <tr key={index} className={`border-t ${index % 2 === 0 ? 'bg-gray-50' : 'bg-gray-100'}`}>
+                <tr key={index} className={`border-t ${index % 2 === 0 ? 'bg-gray-50' : 'bg-gray-100'} hover:bg-purple-100 active:bg-purple-200 transition-all duration-300 ease-in-out`}>
                   <td className="px-6 py-4 text-sm">{item.prenom}</td>
                   <td className="px-6 py-4 text-sm">{item.nom}</td>
                   <td className="px-6 py-4 text-sm">{item.nom_event}</td>
@@ -62,7 +63,8 @@ function AbonnementPage() {
         <button
           onClick={prevPage}
           disabled={currentPage === 1}
-          className="px-6 py-2 bg-green-500 text-white rounded-lg shadow-md disabled:bg-gray-400"
+          className="px-6 py-2 bg-green-500 text-white rounded-lg shadow-md disabled:bg-gray-400 hover:bg-green-600 active:scale-125 active:bg-purple-200 transition-all duration-300 ease-in-out"
+          // className="px-6 py-2 bg-green-500 text-white rounded-lg shadow-md disabled:bg-gray-400"
         >
           Précédent
         </button>
@@ -70,7 +72,8 @@ function AbonnementPage() {
         <button
           onClick={nextPage}
           disabled={currentPage === totalPages}
-          className="px-6 py-2 bg-green-500 text-white rounded-lg shadow-md disabled:bg-gray-400"
+          // className="px-6 py-2 bg-green-500 text-white rounded-lg shadow-md disabled:bg-gray-400"
+          className="px-6 py-2 bg-green-500 text-white rounded-lg shadow-md disabled:bg-gray-400 hover:bg-green-600 active:scale-125 active:bg-purple-200 transition-all duration-300 ease-in-out"
         >
           Suivant
         </button>
