@@ -6,6 +6,14 @@
     height: 100vh;
 }
 
+.add-page{
+    display: fixed;
+    background: rgb(231, 236, 238);
+    flex-direction: column;
+    margin-left: 250px;
+    height: 100%;
+}
+
 .tableau-paiement{
     display: flex;
     height: 70vh;

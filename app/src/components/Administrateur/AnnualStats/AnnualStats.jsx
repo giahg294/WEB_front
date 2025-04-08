@@ -5,7 +5,7 @@ import Statsgraphe from "./Statsgraphe";
 
 function AnnualStats() {
   return (
-    <div className="ad-page">
+    <div className="add-page">
       <Sidebar/>
       <div className="ad-contenu">
         <Statsgraphe />

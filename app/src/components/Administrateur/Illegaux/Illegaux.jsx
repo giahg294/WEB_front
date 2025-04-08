@@ -6,7 +6,7 @@ function IllegauxPage() {
 
   const illegauxData = useIllegaux();
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 10;
+  const itemsPerPage = 9;
 
   
   const indexOfLastItem = currentPage * itemsPerPage;
