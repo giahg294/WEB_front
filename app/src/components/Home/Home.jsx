@@ -4,6 +4,7 @@ import ImageCarousel from './Images';
 import Apropos from './Apropos';
 import './Home.css';
 import Infobar from '../Infobar';
+import Partenaires from './Partenaires';
 
 function Home() {
   return (
@@ -19,6 +20,7 @@ function Home() {
         <ImageCarousel />
       </div>
       <div className='pageHome'>
+        <Partenaires />
         <Apropos />
       </div>
       <Infobar />
