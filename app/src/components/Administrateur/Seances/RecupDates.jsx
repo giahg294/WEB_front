@@ -5,7 +5,7 @@ const EventDates = () => {
   const [dates, setDates] = useState([]);
 
   useEffect(() => {
-    fetch(back_port()+"/stats/getEvent")
+    fetch(back_port()+"/stats/getParticipantsDetailsByEvent")
       .then((response) => response.json())
       .then((data) => setDates(data.map(event => event.date)))
       .catch((error) => console.error("Erreur:", error));
