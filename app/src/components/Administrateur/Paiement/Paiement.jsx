@@ -50,7 +50,8 @@ function PaiementPage() {
           </thead>
           <tbody>
             {currentItems.map((item, index) => (
-              <tr key={index} className={`border-t ${index % 2 === 0 ? 'bg-gray-50' : 'bg-gray-100'}`}>
+              // <tr key={index} className={`border-t ${index % 2 === 0 ? 'bg-gray-50' : 'bg-gray-100'}`}>
+              <tr key={index} className={`border-t ${index % 2 === 0 ? 'bg-gray-50' : 'bg-gray-100'} hover:bg-purple-100 active:bg-purple-200 transition-all duration-300 ease-in-out`}>
                 <td className="px-6 py-4 text-sm">{item.nom}</td>
                 <td className="px-6 py-4 text-sm">{item.email}</td>
                 <td className="px-6 py-4 text-sm">{item.type}</td>
@@ -58,6 +59,11 @@ function PaiementPage() {
                 <td className="px-6 py-4 text-sm">{item.paydate}</td>
               </tr>
             ))}
+            
+
+   
+
+
           </tbody>
         </table>
       </div>
@@ -67,7 +73,7 @@ function PaiementPage() {
         <button
           onClick={prevPage}
           disabled={currentPage === 1}
-          className="px-6 py-2 bg-green-500 text-white rounded-lg shadow-md disabled:bg-gray-400"
+          className="px-6 py-2 bg-green-500 text-white rounded-lg shadow-md disabled:bg-gray-400 hover:bg-green-600 active:scale-125 active:bg-purple-200 transition-all duration-300 ease-in-out"
         >
           Précédent
         </button>
@@ -75,10 +81,11 @@ function PaiementPage() {
         <button
           onClick={nextPage}
           disabled={currentPage === totalPages}
-          className="px-6 py-2 bg-green-500 text-white rounded-lg shadow-md disabled:bg-gray-400"
+          className="px-6 py-2 bg-green-500 text-white rounded-lg shadow-md disabled:bg-gray-400 hover:bg-green-600 active:scale-125 active:bg-purple-200 transition-all duration-300 ease-in-out"
         >
           Suivant
         </button>
+
       </div>
     </div>
   );
