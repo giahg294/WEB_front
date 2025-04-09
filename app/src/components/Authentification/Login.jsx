@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router";
 import back_port from "../../connexion";
 
@@ -13,21 +13,23 @@ function Login() {
         e.preventDefault();
         try {
             const response = await fetch(back_port()+"/api/users/login", {
-                method : 'POST',
-                headers:  {'Content-Type':'application/json'},
-                credentials: "include",
+                method: 'POST',
+                headers: {'Content-Type':'application/json'},
                 body: JSON.stringify({username, password}),
             });
 
             if (response.ok) {
+                const data = await response.json();
+                // Store token in localStorage
+                localStorage.setItem('access_token', data.token);
+                // Set token as a client-side cookie
+                document.cookie = `access_token=${data.token}; path=/; max-age=3600; SameSite=Lax`;
                 navigate("/admin/annual");
-            } 
-            
-            else {
+              } else {
                 const errorText = await response.text();
-                setError(errorText || "Invalid credentials, please try again.");
-            }
-        } 
+                setError(errorText || "Invalid credentials");
+              }
+                      } 
         catch (err) {
             setError("Connexion to server impossible, please try later");
             console.error("Login failed:", err);
@@ -41,7 +43,7 @@ function Login() {
         <div>
             <form onSubmit={handleLogin}>
                 <input
-                    type="username"
+                    type="text"
                     placeholder="Enter username"
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}

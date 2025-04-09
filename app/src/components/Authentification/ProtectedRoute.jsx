@@ -8,14 +8,27 @@ function ProtectedRoute ({ children }) {
     useEffect(() => {
         const checkAuth = async () => {
             try {
-                const response = await fetch(back_port()+"/api/users/admin/dashboard", {
+                // Récupérer le token depuis localStorage
+                const token = localStorage.getItem('access_token');
+                
+                if (!token) {
+                    console.log("No token found");
+                    setIsAuthenticated(false);
+                    return;
+                }
+
+                const res = await fetch(back_port()+"/api/users/admin/dashboard", {
                     method: 'GET',
-                    credentials: "include"
+                    headers: {
+                        'Authorization': `Bearer ${token}` // Envoyer le token dans l'en-tête
+                    }
                 });
                 
-                if (response.ok) {
+                console.log(res);
+                if(res.ok) {
                     setIsAuthenticated(true);
-                } else {
+                }
+                else {
                     setIsAuthenticated(false);
                 }
             } catch (err) {
