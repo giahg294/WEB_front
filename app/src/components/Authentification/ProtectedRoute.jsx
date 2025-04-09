@@ -8,12 +8,18 @@ function ProtectedRoute ({ children }) {
     useEffect(() => {
         const checkAuth = async () => {
             try {
-                await fetch(back_port()+"/api/users/admin/dashboard", {
-                    method : 'GET',
+                const response = await fetch(back_port()+"/api/users/admin/dashboard", {
+                    method: 'GET',
                     credentials: "include"
                 });
-                setIsAuthenticated(true);
+                
+                if (response.ok) {
+                    setIsAuthenticated(true);
+                } else {
+                    setIsAuthenticated(false);
+                }
             } catch (err) {
+                console.error("Erreur de vérification d'authentification:", err);
                 setIsAuthenticated(false);
             }
         };

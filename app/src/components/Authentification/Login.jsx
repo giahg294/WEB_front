@@ -6,6 +6,7 @@ function Login() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState(""); 
+    const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
 
     async function handleLogin(e){
@@ -16,20 +17,23 @@ function Login() {
                 headers:  {'Content-Type':'application/json'},
                 credentials: "include",
                 body: JSON.stringify({username, password}),
-            },{
             });
 
-            console.log(response);
             if (response.ok) {
                 navigate("/admin/annual");
-              } else {
+            } 
+            
+            else {
                 const errorText = await response.text();
-                setError(errorText || "Invalid credentials");
-              }
-                      } 
+                setError(errorText || "Invalid credentials, please try again.");
+            }
+        } 
         catch (err) {
-            setError("Invalid credentials, please try again.");
+            setError("Connexion to server impossible, please try later");
             console.error("Login failed:", err);
+        }
+        finally {
+            setLoading(false);
         }
     };
  
@@ -42,6 +46,7 @@ function Login() {
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
                     required
+                    disabled={loading}
                 />
                 <input
                     type="password"
@@ -49,6 +54,7 @@ function Login() {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     required
+                    disabled={loading}
                 />
                 <button type="submit">
                     Login
