@@ -19,33 +19,36 @@ function ListEvents() {
     return acc;
   }, {});
 
+  // Trier les dates dans l'ordre croissant
+  const sortedGroupedEntries = Object.entries(groupedByDate).sort(
+    ([dateA], [dateB]) =>
+      new Date(dateA.split('/').reverse().join('-')) - new Date(dateB.split('/').reverse().join('-'))
+  );
+
   return (
     <div className="events-container">
-      {Object.entries(groupedByDate).map(([date, eventsForDate], index) => (
+      {sortedGroupedEntries.map(([date, eventsForDate], index) => (
         <div key={index} className="date-group">
-          <h2>{date}</h2>
+          <h2>{date} - soirée pistoche</h2>
           <div className="event-list">
-            {eventsForDate.map((event, i) => (
-              <div key={i} className="event-card">
-                <h3>{event.nom}</h3>
-                {event.participantsMax !== null ? (
+            {eventsForDate.map((event, i) => {
+              const isTarifReduit = event.nom.toLowerCase().includes("réduit");
+              return (
+                <div key={i} className="event-card">
+                  <h3>{isTarifReduit ? 'Tarif réduit' : 'Tarif normal'}</h3>
                   <p>
-                    {event.participants}/{event.participantsMax}
+                    {event.participants}/{event.participantsMax ?? 'illimités'}
                   </p>
-                ) : (
-                  <p>
-                    {event.participants}/illimités
-                  </p>
-                )}
-                {event.participants < event.participantsMax || event.participantsMax === null ? (
-                  <a href={event.url} target="_blank" rel="noopener noreferrer">
-                    <button>Je participe !</button>
-                  </a>
-                ) : (
-                  <div>Plus de places</div>
-                )}
-              </div>
-            ))}
+                  {event.participants < event.participantsMax || event.participantsMax === null ? (
+                    <a href={event.url} target="_blank" rel="noopener noreferrer">
+                      <button>Je participe !</button>
+                    </a>
+                  ) : (
+                    <div>Plus de places</div>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
       ))}
