@@ -55,7 +55,7 @@ const handleSendEmail = async () => {
   return (
     <div className="ad-page">
       <Sidebar/>
-      <h1 className="ad-titre">Liste des illégaux</h1>
+      <h1 className="ad-titre">Liste des hors la loi</h1>
 
       {/* Conteneur en deux colonnes */}
       <div className="flex flex-wrap gap-6">

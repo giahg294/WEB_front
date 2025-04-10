@@ -78,7 +78,7 @@ function Sidebar() {
                 }`}
               >
                 <img src="/icons/sick.svg" alt="money" className="icon" />
-                Illegaux
+                Hors la loi
               </Link>
             </li>
           </ul>
